@@ -9,10 +9,12 @@ const Toolbar = props => (
         <div className="Logo">
             <Logo />
         </div>
-        <nav>
-            <NavigationItems className="DesktopOnly" />
+        <nav className="DesktopOnly">
+            <NavigationItems  />
         </nav>
     </header>
+    
+    
 );
 
 export default Toolbar;

@@ -1,0 +1,108 @@
+.heroContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .heroContainer {
+    height: 95vh;
+  }
+}
+
+.heroText {
+  position: absolute;
+  width: 80vw;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 650px) {
+  .heroText {
+    top: 10%;
+    margin-top: -6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroText {
+    top: 30%;
+  }
+}
+
+@media (width: 1024px) {
+  .heroText {
+    top: 25%;
+  }
+}
+
+.heroText p {
+  font-size: 40px;
+}
+
+@media (max-width: 500px) {
+  .heroText p {
+    font-size: 1px;
+  }
+}
+
+@media (max-width: 750px) {
+  .heroText p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroText p {
+    font-size: 35px;
+  }
+}
+
+.bannerImgContainer {
+  position: relative;
+  background: url(../../assets/images/bannerImage.png) no-repeat center;
+  background-size: contain;
+  background-position-y: top;
+  background-repeat: none;
+  overflow: hidden;
+  height: 90vh;
+  margin: 5px;
+}
+
+.react-rotating-text-cursor {
+  -webkit-animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+          animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@-webkit-keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=Hero.css.map */

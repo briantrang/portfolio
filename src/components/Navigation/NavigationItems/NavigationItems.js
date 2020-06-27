@@ -5,7 +5,7 @@ import './NavigationItems.scss'
 const NavigationItems = props => (
     <ul className="NavigationItems">
         <NavigationItem>Resume</NavigationItem>
-        <NavigationItem>Experience</NavigationItem>
+        {/* <NavigationItem>Experience</NavigationItem> */}
     </ul>
 );
 
