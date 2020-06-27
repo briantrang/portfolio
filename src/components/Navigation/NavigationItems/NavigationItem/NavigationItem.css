@@ -1,0 +1,19 @@
+.NavigationItem {
+  height: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavigationItem:hover,
+.NavigationItem:active,
+.NavigationItem.active {
+  color: #83f2f1;
+}
+/*# sourceMappingURL=NavigationItem.css.map */

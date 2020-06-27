@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "App.scss",
+        "constants/Variables.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}

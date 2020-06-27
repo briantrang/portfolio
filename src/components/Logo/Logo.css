@@ -1,0 +1,11 @@
+.logoStyle {
+  padding: 8px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logoStyle img {
+  max-height: 75px;
+}
+/*# sourceMappingURL=Logo.css.map */
