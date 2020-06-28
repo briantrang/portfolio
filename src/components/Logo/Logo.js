@@ -4,7 +4,7 @@ import './Logo.scss';
 
 const Logo = props => (
     <div className="logoStyle">
-        <img src={myLogo} alt="My Logo"/>
+        <a href="/"><img src={myLogo} alt="My Logo"/></a>
     </div>
 );
 
