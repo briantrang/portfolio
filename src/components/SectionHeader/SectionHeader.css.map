@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,6HAAI;ADEZ,AAAA,iBAAiB,CAAA;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,ECFL,OAAO;CDIrB",
+    "sources": [
+        "SectionHeader.scss",
+        "../../constants/Variables.scss"
+    ],
+    "names": [],
+    "file": "SectionHeader.css"
+}

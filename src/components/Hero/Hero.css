@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 .heroContainer {
-  height: 100%;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,11 +11,32 @@
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   z-index: -100;
+  margin-bottom: -1rem;
 }
 
 @media (max-width: 500px) {
   .heroContainer {
-    height: 95vh;
+    height: 33vh !important;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+  .heroContainer {
+    height: 43vh;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .heroContainer {
+    height: 78vh;
+  }
+}
+
+@media (width: 1024px) {
+  .heroContainer {
+    height: 60vh;
   }
 }
 
@@ -30,20 +51,19 @@
 
 @media (max-width: 650px) {
   .heroText {
-    top: 10%;
-    margin-top: -6rem;
+    top: 40%;
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 650px) and (max-width: 900px) {
   .heroText {
-    top: 30%;
+    top: 40%;
   }
 }
 
-@media (width: 1024px) {
+@media (min-width: 901px) and (max-width: 1024px) {
   .heroText {
-    top: 25%;
+    top: 40%;
   }
 }
 
@@ -51,21 +71,15 @@
   font-size: 40px;
 }
 
-@media (max-width: 500px) {
-  .heroText p, .heroText span {
-    font-size: 1px;
-  }
-}
-
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .heroText p, .heroText span {
     font-size: 20px;
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 901px) and (max-width: 1024px) {
   .heroText p, .heroText span {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
@@ -83,8 +97,15 @@
   background-position-y: top;
   background-repeat: none;
   overflow: hidden;
-  height: 90vh;
+  height: 100%;
+  width: 100%;
   margin: 5px;
+}
+
+@media (max-width: 525px) {
+  .bannerImgContainer {
+    height: 42vh;
+  }
 }
 
 .react-rotating-text-cursor {

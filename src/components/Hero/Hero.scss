@@ -1,16 +1,28 @@
 @import "../../constants/Variables.scss";
 
 .heroContainer{
-    height: 100%;
+    height: 90vh;
     display: flex;
     // justify-content: flex-start;
     flex-direction: column;
     text-align: center;
     font-family: $ubuntuFont;
-    @media (max-width: 500px){
-        height: 95vh;
-    }
     z-index: -100;
+    margin-bottom: -1rem;
+    @media (max-width: 500px){
+        height: 33vh !important;
+        margin-bottom: -0.5rem;
+    }
+    @media (min-width: 501px) and (max-width: 900px){
+        height: 43vh;
+        margin-bottom: -0.5rem;
+    }
+    @media (min-width: 901px) and (max-width: 1180px){
+        height: 78vh;
+    }
+    @media(width: 1024px){
+        height: 60vh;
+    }
 }
 
 .heroText{
@@ -20,28 +32,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @media (max-width: 650px){
-        top: 10%;
-        margin-top: -6rem;
+        top: 40%;
+       // margin-top: -6rem;
     }
-    @media (max-width: 900px){
-        top: 30%;
+    @media (min-width: 650px) and (max-width: 900px){
+        top: 40%;
     }
-    @media(width: 1024px){
-        top: 25%;
+    @media (min-width: 901px) and (max-width: 1024px){
+        top: 40%;
     }
     
 }
 .heroText p, .heroText span {
     font-size: 40px;
 
-    @media (max-width: 500px){
-        font-size: 1px;
-    }
-    @media (max-width: 750px){
+    @media (max-width: 900px){
         font-size: 20px;
     }
-    @media (max-width: 900px){
-        font-size: 35px;
+    @media (min-width: 901px) and (max-width: 1024px){
+        font-size: 40px;
     }
 }
 
@@ -59,8 +68,13 @@
     background-position-y: top;
     background-repeat: none;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
+    width: 100%;
     margin: 5px;
+    @media(max-width: 525px){
+        height: 42vh;
+    }
+
 }
 
 .react-rotating-text-cursor {
