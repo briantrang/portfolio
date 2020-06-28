@@ -1,14 +1,17 @@
+@import "../../constants/Variables.scss";
+
 .heroContainer{
     height: 100%;
     display: flex;
     // justify-content: flex-start;
     flex-direction: column;
     text-align: center;
+    font-family: $ubuntuFont;
     @media (max-width: 500px){
         height: 95vh;
     }
+    z-index: -100;
 }
-
 
 .heroText{
     position: absolute;
@@ -28,9 +31,9 @@
     }
     
 }
-.heroText p {
+.heroText p, .heroText span {
     font-size: 40px;
-    
+
     @media (max-width: 500px){
         font-size: 1px;
     }
@@ -42,7 +45,12 @@
     }
 }
 
-
+.heroText span{
+    background: -webkit-linear-gradient($primaryColor, $accentColor);
+    background-clip: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .bannerImgContainer{
     position: relative;
@@ -56,7 +64,7 @@
 }
 
 .react-rotating-text-cursor {
-    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+    animation: blinking-cursor 0.8s cubic-bezier(0.99, 0.01, 0.01, 0.99) 0s infinite; 
   }
   
   @keyframes blinking-cursor {

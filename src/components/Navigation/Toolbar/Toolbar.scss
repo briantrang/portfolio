@@ -1,3 +1,5 @@
+@import '../../../constants/Variables.scss';
+
 .Toolbar {
     height: 100px;
     width: 100%;
@@ -7,25 +9,28 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
-    // align-items: center;
-    // box-sizing: border-box;
-    // z-index: 90;
+    z-index: 90;
+    @media (max-width: 500px){
+        height: 150px;
+        display: block;
+        text-align: center;
+    }
 }
 
-.Logo {
+.Logo, .socialIcons {
     height: 80%;
+    color: red;
+    @media(max-width: 500px){
+        height: 40%;
+    }
 }
 .Toolbar nav {
     height: 100%;
 }
 
-.Logo {
-    height: 80%;
-}
 
-@media (max-width: 499px){
-    .DesktopOnly{
-        display: none;
-    }
-}
+// @media (max-width: 499px){
+//     .DesktopOnly{
+//         display: none;
+//     }
+// }

@@ -8,7 +8,7 @@ const Hero = props => (
         <div className="bannerImgContainer">
             <div className="heroText">
                 <p>Hi, I'm Brian and I am a </p>
-                <p><ReactRoatingText items={['Web Developer']}/></p>
+                <span className="heroTextJob"><ReactRoatingText items={['Web Developer']}/></span>
             </div>
         </div>
     </div>

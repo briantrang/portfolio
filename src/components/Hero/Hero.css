@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 .heroContainer {
   height: 100%;
   display: -webkit-box;
@@ -8,6 +9,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  z-index: -100;
 }
 
 @media (max-width: 500px) {
@@ -44,26 +47,33 @@
   }
 }
 
-.heroText p {
+.heroText p, .heroText span {
   font-size: 40px;
 }
 
 @media (max-width: 500px) {
-  .heroText p {
+  .heroText p, .heroText span {
     font-size: 1px;
   }
 }
 
 @media (max-width: 750px) {
-  .heroText p {
+  .heroText p, .heroText span {
     font-size: 20px;
   }
 }
 
 @media (max-width: 900px) {
-  .heroText p {
+  .heroText p, .heroText span {
     font-size: 35px;
   }
+}
+
+.heroText span {
+  background: -webkit-linear-gradient(#83f1c5, #83f2f1);
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bannerImgContainer {
@@ -78,8 +88,8 @@
 }
 
 .react-rotating-text-cursor {
-  -webkit-animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
-          animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+  -webkit-animation: blinking-cursor 0.8s cubic-bezier(0.99, 0.01, 0.01, 0.99) 0s infinite;
+          animation: blinking-cursor 0.8s cubic-bezier(0.99, 0.01, 0.01, 0.99) 0s infinite;
 }
 
 @-webkit-keyframes blinking-cursor {
