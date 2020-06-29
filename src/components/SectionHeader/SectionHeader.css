@@ -6,9 +6,15 @@
   background-image: linear-gradient(to top left, #83f1c5, #83ddf1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) and (max-height: 600px) {
   .sectionContainer {
-    height: 70vh;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .sectionContainer {
+    height: 65vh;
   }
 }
 
