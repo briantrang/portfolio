@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Toolbar from './components/Navigation/Toolbar/Toolbar'
 import Hero from './components/Hero/Hero'
 import SectionHeader from './components/SectionHeader/SectionHeader'
+import SectionHeaderBGImage from './components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage'
 import Services from './components/Services/Services'
+
 
 function App() {
   return (
@@ -20,9 +22,10 @@ function App() {
         subContentHeading="Below are qualities I implement into all websites I work on."
       />
       <Services />
-      <SectionHeader 
+      <SectionHeaderBGImage
         title="Some of my Projects"
         content="Below are some of the projects that I've worked on."
+        background="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       />
     </div>
   );
