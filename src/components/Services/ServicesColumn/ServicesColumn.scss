@@ -1,0 +1,59 @@
+@import '../../../constants/Variables.scss';
+$grayBorder: #E6ECF8;
+
+
+.column{
+    border-right: 1px solid $grayBorder;
+    @media(max-width: 767px){
+        border-right: none;
+        border-bottom: 1px solid $grayBorder;
+    }
+    @media(max-width: 1200px){
+        border-bottom: 1px solid $grayBorder;
+    }
+    padding: 1rem;
+}
+
+.column:nth-child(3), .column:nth-child(4){
+    @media(min-width: 767px) and (max-width: 1200px){
+        border-bottom: none!important;
+    }
+}
+
+.column:last-child{
+    border-right: 0px solid $grayBorder;
+    @media(max-width: 767px){
+        border-bottom: none;
+    }
+}
+
+@media(max-width: 1200px){
+    .column:nth-child(2), .column:nth-child(4){
+        border-right: 0px solid $grayBorder;
+    }
+}
+
+.fontLogo{
+    font-size: 2rem;
+    color: $accentColor;
+}
+
+.servicesColumnTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.description{
+    margin-bottom: 3rem;
+}
+
+.hrStyle{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.quote{
+    font-size: 1rem;
+}

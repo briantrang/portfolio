@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.column {
+  border-right: 1px solid #E6ECF8;
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .column {
+    border-right: none;
+    border-bottom: 1px solid #E6ECF8;
+  }
+}
+
+@media (max-width: 1200px) {
+  .column {
+    border-bottom: 1px solid #E6ECF8;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .column:nth-child(3), .column:nth-child(4) {
+    border-bottom: none !important;
+  }
+}
+
+.column:last-child {
+  border-right: 0px solid #E6ECF8;
+}
+
+@media (max-width: 767px) {
+  .column:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .column:nth-child(2), .column:nth-child(4) {
+    border-right: 0px solid #E6ECF8;
+  }
+}
+
+.fontLogo {
+  font-size: 2rem;
+  color: #83f2f1;
+}
+
+.servicesColumnTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.description {
+  margin-bottom: 3rem;
+}
+
+.hrStyle {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.quote {
+  font-size: 1rem;
+}
+/*# sourceMappingURL=ServicesColumn.css.map */

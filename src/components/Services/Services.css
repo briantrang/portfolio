@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.sectionServicesContainer {
+  width: 70vw;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 1400px) {
+  .sectionServicesContainer {
+    width: 90vw;
+  }
+}
+
+.noMargin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
+
+.servicesContainer {
+  margin-top: -5rem;
+  background-color: white;
+  border: 1px solid #E6ECF8;
+  border-radius: 1rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.row .noHorizontalMargin:last-child {
+  border-right: none;
+}
+/*# sourceMappingURL=Services.css.map */

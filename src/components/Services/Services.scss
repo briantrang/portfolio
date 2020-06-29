@@ -1,0 +1,31 @@
+@import '../../constants/Variables.scss';
+$grayBorder: #E6ECF8;
+
+.sectionServicesContainer{
+    width: 70vw;
+    margin: 0 auto;
+    font-family: $ubuntuFont;  
+    @media (max-width: 1400px){
+        width: 90vw;
+    }
+}
+
+
+.noMargin{
+    margin-left: 0!important;
+    margin-right: 0!important;
+    margin-top: 0!important;
+}
+.servicesContainer{
+    margin-top: -5rem;
+    background-color: white;
+    border: 1px solid $grayBorder;
+    border-radius: 1rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.row .noHorizontalMargin:last-child{
+    border-right: none;
+}

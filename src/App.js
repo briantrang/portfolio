@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Toolbar from './components/Navigation/Toolbar/Toolbar'
 import Hero from './components/Hero/Hero'
 import SectionHeader from './components/SectionHeader/SectionHeader'
+import Services from './components/Services/Services'
 
 function App() {
   return (
@@ -12,9 +13,13 @@ function App() {
       <Hero />
       <SectionHeader 
         title="Hi, I am Brian."
-        content="I'm a passionate Web Developer who loves to learn how different websites are designed and built. 
-        I enjoy looking at how some websites are built and seeing how I would build them as well as improve upon them."
+        content="I am an experienced Web Developer with a demonstrated history of working in a client-facing environment. 
+        I am skilled in WordPress, Shopify, HTML, CSS, and JavaScript. 
+        I am also currently learning and improve my skills in ReactJS and React Native. 
+        By the way, this site was built from scratch in ReactJS."
+        subContentHeading="Below are qualities I implement into all websites I work on."
       />
+      <Services />
     </div>
   );
 
