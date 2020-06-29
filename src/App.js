@@ -20,6 +20,10 @@ function App() {
         subContentHeading="Below are qualities I implement into all websites I work on."
       />
       <Services />
+      <SectionHeader 
+        title="Some of my Projects"
+        content="Below are some of the projects that I've worked on."
+      />
     </div>
   );
 
