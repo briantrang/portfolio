@@ -8,8 +8,8 @@ const ProjectItems = props => (
             <div className="image">
                 <img className="projectImage" src={props.background} alt="Company BG"/>
                 <div className="companyDetails fadeInBottom">
-                    <p className="companyInfo">Hi I am some text</p>
-                    <a className="companyLink">Click me</a>
+                    <p className="companyInfo">{props.aboutCompany}</p>
+                    <a className="btn btn-primary" href={props.companyLink} target="_blank">View Website</a>
                 </div>
             <div className="imageOverlay"></div>
            </div>

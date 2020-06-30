@@ -11,10 +11,22 @@ const Projects = props => (
     <div className="sectionProjectsContainer">
         <div className="projectContainer">
             <div className="customRow">
-                <ProjectItems background={SonsisiBG} />
-                <ProjectItems background={SuperbBG} />
-                <ProjectItems background={NoBSBG} />
-                <ProjectItems background={DeepBlueBG} />
+                <ProjectItems 
+                    background={SonsisiBG} 
+                    aboutCompany="High-end affordable Korean Beauty Supply E-Commerce store." 
+                    companyLink="https://sonsisibeauty.com/" />
+                <ProjectItems 
+                    background={SuperbBG} 
+                    aboutCompany="Custom designed dops for gem faceting made with precision." 
+                    companyLink="https://superbdops.com/" />
+                <ProjectItems 
+                    background={NoBSBG} 
+                    aboutCompany="E-Commerce store that follows the No BS lifestyle." 
+                    companyLink="https://www.nobsmantra.com/" />
+                <ProjectItems 
+                    background={DeepBlueBG} 
+                    aboutCompany="Discover scuba diving in the Philippines and have an unforgettable experience." 
+                    companyLink="https://deepblueseafari.com/" />
             </div>
         </div>
     </div>

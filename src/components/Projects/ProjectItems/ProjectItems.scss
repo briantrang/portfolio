@@ -13,7 +13,7 @@
         width: 50%;
     }
 }
-@media (min-width: 1200px){
+@media (min-width: 1400px){
     .custom-col-xl-3 {
         position: relative;
         flex: 0 0 25%;
@@ -70,6 +70,13 @@
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
+    z-index: 10;
+    font-family: $ubuntuFont;
+  }
+
+  .companyInfo{
+      color: white;
+      padding: 1rem;
   }
 
   .projectItemContainer:hover .companyDetails{
