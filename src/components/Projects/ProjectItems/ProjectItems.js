@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProjectItems.scss'
+import Button from '../../UI/Button/Button'
 
 const ProjectItems = props => (
 
@@ -9,7 +10,7 @@ const ProjectItems = props => (
                 <img className="projectImage" src={props.background} alt="Company BG"/>
                 <div className="companyDetails fadeInBottom">
                     <p className="companyInfo">{props.aboutCompany}</p>
-                    <a className="btn btn-primary" href={props.companyLink} target="_blank">View Website</a>
+                    <Button link={props.companyLink} target="_blank">View Website</Button>
                 </div>
             <div className="imageOverlay"></div>
            </div>
