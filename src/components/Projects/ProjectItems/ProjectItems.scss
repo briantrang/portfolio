@@ -1,0 +1,83 @@
+@import '../../../constants/Variables.scss';
+
+
+.custom-col-12 {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+}
+@media (min-width: 576px){
+    .custom-col-sm-6 {
+        position: relative;
+        flex: 0 0 50%;
+        width: 50%;
+    }
+}
+@media (min-width: 1200px){
+    .custom-col-xl-3 {
+        position: relative;
+        flex: 0 0 25%;
+        width: 25%;
+    }
+}
+.projectItemContainer{
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.projectImage{
+    width: 100%;
+    border-radius: 1.5rem; 
+    overflow: hidden;
+}
+
+.imageOverlay{
+    border-radius: 1.5rem;
+    padding: 16px;
+}
+.projectItemContainer .imageOverlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+   
+  .projectItemContainer:hover .imageOverlay{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+
+  }
+
+  .companyDetails{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .projectItemContainer:hover .companyDetails{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+   
+  .fadeInBottom{
+    top: 80%;
+  }

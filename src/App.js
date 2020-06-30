@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero'
 import SectionHeader from './components/SectionHeader/SectionHeader'
 import SectionHeaderBGImage from './components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage'
 import Services from './components/Services/Services'
+import Projects from './components/Projects/Projects'
 
 
 function App() {
@@ -23,10 +24,11 @@ function App() {
       />
       <Services />
       <SectionHeaderBGImage
-        title="Some of my Projects"
+        title="Some of my Work Experience"
         content="Below are some of the projects that I've worked on."
-        background="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        background="https://images.pexels.com/photos/2764711/pexels-photo-2764711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       />
+      <Projects />
     </div>
   );
 

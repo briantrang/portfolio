@@ -1,0 +1,13 @@
+@import '../../constants/Variables.scss';
+
+.sectionProjectsContainer{
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.customRow{
+    display:flex;
+    flex-wrap: wrap;
+
+    flex-basis: 20%;
+}
