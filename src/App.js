@@ -16,7 +16,7 @@ function App() {
       <Toolbar />
       <Hero />
       <SectionHeader 
-        title="Hi, I am Brian."
+        title="Hi, I am Brian.?"
         content="I am an experienced Web Developer with a demonstrated history of working in a client-facing environment. 
         I am skilled in WordPress, Shopify, HTML, CSS, and JavaScript. 
         I am also currently learning and improve my skills in ReactJS and React Native. 
