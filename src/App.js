@@ -7,7 +7,7 @@ import SectionHeader from './components/SectionHeader/SectionHeader'
 import SectionHeaderBGImage from './components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage'
 import Services from './components/Services/Services'
 import Projects from './components/Projects/Projects'
-
+import Resume from './components/Resume/Resume'
 
 function App() {
   return (
@@ -26,9 +26,10 @@ function App() {
       <SectionHeaderBGImage
         title="Some of my Work Experience"
         content="Below are some of the projects that I've worked on."
-        background="https://images.pexels.com/photos/2764711/pexels-photo-2764711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        background="https://images.pexels.com/photos/3787308/pexels-photo-3787308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       />
       <Projects />
+      <Resume />
     </div>
   );
 

@@ -3,7 +3,9 @@ import './Button.scss'
 
 const Button = props => (
 
-        <a className="button" href={props.link} target={props.target}>{props.children}</a>
+        <a className="button" href={props.link} target={props.target} onClick={props.onClick} style={props.style}>
+                {props.children}{props.content}
+        </a>
 
 );
 

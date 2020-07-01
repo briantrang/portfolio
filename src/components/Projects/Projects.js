@@ -17,7 +17,7 @@ const Projects = props => (
                     companyLink="https://sonsisibeauty.com/" />
                 <ProjectItems 
                     background={SuperbBG} 
-                    aboutCompany="Custom designed dops for gem faceting made with precision." 
+                    aboutCompany="Custom designed dops for gem faceting that is made with precision." 
                     companyLink="https://superbdops.com/" />
                 <ProjectItems 
                     background={NoBSBG} 

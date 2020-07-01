@@ -8,7 +8,7 @@ const SectionHeader = props => (
             <div className="sectionContent">
                 <h1>{props.title}</h1>
                 <p>{props.content}</p>
-                <h5>{props.subContentHeading}</h5>
+                <p>{props.subContentHeading}</p>
             </div>
         </div>
 

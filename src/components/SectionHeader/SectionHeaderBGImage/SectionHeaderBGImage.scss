@@ -2,15 +2,15 @@
 @import '../SectionHeader.scss';
 
 .bannerImage{
-    opacity: 0.9;
+    opacity: 1;
     background-repeat: none;
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .sectionTitleText, 
 .sectionContentText,
 .sectionSubContentText{
     color: white;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 1px 1px 10px black;
 }
