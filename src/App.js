@@ -8,6 +8,7 @@ import SectionHeaderBGImage from './components/SectionHeader/SectionHeaderBGImag
 import Services from './components/Services/Services'
 import Projects from './components/Projects/Projects'
 import Resume from './components/Resume/Resume'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       />
       <Projects />
       <Resume />
+      <Footer />
     </div>
   );
 

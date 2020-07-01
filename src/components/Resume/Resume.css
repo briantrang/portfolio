@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.resumeContainer {
+  width: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.buttonStyle {
+  color: black;
+  font-weight: bold !important;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 70vw;
+  max-height: 80vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .modalContent {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+.modalTitle {
+  text-align: center;
+  width: 100%;
+}
+
+.iframe {
+  height: 100vh;
+  width: 100%;
+}
+/*# sourceMappingURL=Resume.css.map */

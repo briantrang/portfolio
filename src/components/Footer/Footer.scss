@@ -1,0 +1,24 @@
+@import '../../constants//Variables.scss';
+
+.footerContainer{
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid $primaryColor;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+}
+.taglineContainer{
+    padding: 1rem;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: $ubuntuFont;
+}
+
+.footerSubNotes{
+    font-size: 14px;
+}
