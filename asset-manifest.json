@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/briantrang/briantrang.github.io/static/css/main.d3854ba1.chunk.css",
+    "main.js": "/briantrang/briantrang.github.io/static/js/main.d7a6cae6.chunk.js",
+    "main.js.map": "/briantrang/briantrang.github.io/static/js/main.d7a6cae6.chunk.js.map",
+    "runtime-main.js": "/briantrang/briantrang.github.io/static/js/runtime-main.2fa39a03.js",
+    "runtime-main.js.map": "/briantrang/briantrang.github.io/static/js/runtime-main.2fa39a03.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/briantrang/briantrang.github.io/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.4ac220e2.chunk.js": "/briantrang/briantrang.github.io/static/js/2.4ac220e2.chunk.js",
+    "static/js/2.4ac220e2.chunk.js.map": "/briantrang/briantrang.github.io/static/js/2.4ac220e2.chunk.js.map",
+    "index.html": "/briantrang/briantrang.github.io/index.html",
+    "precache-manifest.251df1cda71c51872e50e279cc245d69.js": "/briantrang/briantrang.github.io/precache-manifest.251df1cda71c51872e50e279cc245d69.js",
+    "service-worker.js": "/briantrang/briantrang.github.io/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/briantrang/briantrang.github.io/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.d3854ba1.chunk.css.map": "/briantrang/briantrang.github.io/static/css/main.d3854ba1.chunk.css.map",
+    "static/js/2.4ac220e2.chunk.js.LICENSE.txt": "/briantrang/briantrang.github.io/static/js/2.4ac220e2.chunk.js.LICENSE.txt",
+    "static/media/DeepBlueImage.jpg": "/briantrang/briantrang.github.io/static/media/DeepBlueImage.517a96ca.jpg",
+    "static/media/Logo 1000x400.png": "/briantrang/briantrang.github.io/static/media/Logo 1000x400.dda312e4.png",
+    "static/media/NoBSImage.jpg": "/briantrang/briantrang.github.io/static/media/NoBSImage.5df06489.jpg",
+    "static/media/SonsisiImage.jpg": "/briantrang/briantrang.github.io/static/media/SonsisiImage.af0d47a8.jpg",
+    "static/media/SuperbImage.jpg": "/briantrang/briantrang.github.io/static/media/SuperbImage.02aaf346.jpg",
+    "static/media/Hero.scss": "/briantrang/briantrang.github.io/static/media/bannerImage.8ddd372d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fa39a03.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.4ac220e2.chunk.js",
+    "static/css/main.d3854ba1.chunk.css",
+    "static/js/main.d7a6cae6.chunk.js"
+  ]
+}
