@@ -16,7 +16,7 @@ const Footer = props => (
             <p>Web Developer | Website Designer | Project Manager | Facebook ADs Manager | Web Analyst</p>
         </div>
         <div className="footerNotes">
-            <p>Designed and handcoded by myself</p>
+            <p className="footerSubNotes">Designed and handcoded by myself</p>
             <p className="footerSubNotes">
                 Website was made using&nbsp;
                 <a href="https://reactjs.org/" target="_blank">ReactJS</a>,&nbsp;
