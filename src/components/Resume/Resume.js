@@ -30,7 +30,7 @@ const Resume = props => {
                         <iframe 
                             className="iframe"
                             title="resume" 
-                            src="https://drive.google.com/file/d/189BXkFQuepNQT-vN7geWog_LcEezm4m3/preview" 
+                            src="https://drive.google.com/file/d/1AxwFp25l1GtNYFJlPT4ZmBhROwiB8U02/preview" 
                         > 
                         </iframe>
                     </Modal.Body>
