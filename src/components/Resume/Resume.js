@@ -21,7 +21,7 @@ const Resume = props => {
                     <Modal.Header closeButton>
                     <Modal.Title className="modalTitle">
                         Brian Trang's Resume - 
-                        <a href="https://drive.google.com/file/d/189BXkFQuepNQT-vN7geWog_LcEezm4m3/preview"> 
+                        <a href="https://drive.google.com/file/d/1AxwFp25l1GtNYFJlPT4ZmBhROwiB8U02/preview"> 
                              &nbsp;Direct Link
                             </a>
                     </Modal.Title>
