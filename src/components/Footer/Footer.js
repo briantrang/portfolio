@@ -13,7 +13,7 @@ const Footer = props => (
             <SocialIcons />
         </div>
         <div className="taglineContainer">
-            <p>Web Developer | Website Designer | Project Manager | Facebook ADs Manager | Web Analyst</p>
+            <p>Web Developers | Website Designer | Project Manager | Facebook ADs Manager | Web Analyst</p>
         </div>
         <div className="footerNotes">
             <p className="footerSubNotes">Designed and handcoded by myself</p>
