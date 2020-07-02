@@ -1,1 +1,1 @@
-rmdir build
+rm -rf build
