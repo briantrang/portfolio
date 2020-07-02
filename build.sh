@@ -1,7 +1,7 @@
 # Script to re push to github
 echo "Copying over .git"
 mkdir tmp/
-cp -R ./build/.git tmp/
+sudo cp -R ./build/.git tmp/
 
 npm build
 # yarn spa_support
