@@ -1,25 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import database  from './firebase'
 import axios from 'axios'
 import './App.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Toolbar from './components/Navigation/Toolbar/Toolbar'
 import Hero from './components/Hero/Hero'
-import SectionHeader from './components/SectionHeader/SectionHeader'
-import SectionHeaderBGImage from './components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage'
-import Services from './components/Services/Services'
-import Projects from './components/Projects/Projects'
-import Resume from './components/Resume/Resume'
-import Footer from './components/Footer/Footer'
+
+//Lazy loading components
+const SectionHeader = React.lazy(() => import('./components/SectionHeader/SectionHeader'));
+const Services = React.lazy(() => import('./components/Services/Services'));
+const SectionHeaderBGImage = React.lazy(() => import('./components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage'));
+const Projects = React.lazy(() => import('./components/Projects/Projects'));
+const Resume = React.lazy(() => import('./components/Resume/Resume'));
+const Footer = React.lazy(() => import('./components/Footer/Footer'));
 
 function App() {
 
+  //database states
   const [sectionHeader, setSectionHeader] = useState([]);
   const [sectionHeaderBGImage, setSectionHeaderBGImage] = useState([]);
   const [services, setServices] = useState([]);
   const [projects, setProjects] = useState([]);
   const [resume, setResume] = useState([]);
-    
+
+//call database and get data
 useEffect(() => {
     const databaseUrl = database.ref();
     axios.get(databaseUrl + ".json")
@@ -38,26 +42,44 @@ useEffect(() => {
     return (
       <div>
         <Toolbar />
+
         <Hero />
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <SectionHeader 
+            title={sectionHeader.title}
+            content={sectionHeader.content}
+            subContentHeading={sectionHeader.subcontentHeading}
+            />
+        </Suspense>
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <Services servicesContent={services}/>
+        </Suspense>
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <SectionHeaderBGImage
+            title={sectionHeaderBGImage.title}
+            content={sectionHeaderBGImage.content}
+            background={sectionHeaderBGImage.background}
+          />
+        </Suspense>
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <Projects projectsContent={projects}/>
+        </Suspense>
+
+        <Suspense fallback={<p>Loading...</p>}>
+          <Resume 
+            title={resume.title}
+            description={resume.description}
+            link={resume.link}
+          />
+        </Suspense>
         
-        <SectionHeader 
-          title={sectionHeader.title}
-          content={sectionHeader.content}
-          subContentHeading={sectionHeader.subcontentHeading}
-        />
-        <Services servicesContent={services}/>
-        <SectionHeaderBGImage
-          title={sectionHeaderBGImage.title}
-          content={sectionHeaderBGImage.content}
-          background={sectionHeaderBGImage.background}
-        />
-        <Projects projectsContent={projects}/>
-        <Resume 
-          title={resume.title}
-          description={resume.description}
-          link={resume.link}
-        />
-        <Footer />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Footer />
+        </Suspense>
       </div>
     );
   
