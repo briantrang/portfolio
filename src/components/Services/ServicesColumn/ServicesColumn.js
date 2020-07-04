@@ -5,7 +5,7 @@ const ServicesColumn = props => (
     
     <div className="col-12 col-md-6 col-xl-3 column">
         <div className="fontLogo">
-            <i class={props.fontLogo} aria-hidden="true"></i>
+            <i className={props.fontLogo} aria-hidden="true"></i>
         </div>
         <h1 className="servicesColumnTitle">
             {props.title}
