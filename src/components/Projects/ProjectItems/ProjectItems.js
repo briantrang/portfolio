@@ -10,7 +10,7 @@ const ProjectItems = props => (
                 <img className="projectImage" src={props.background} alt="Company BG"/>
                 <div className="companyDetails fadeInBottom">
                     <p className="companyInfo">{props.aboutCompany}</p>
-                    <Button link={props.companyLink} target="_blank">View Website</Button>
+                    <Button link={props.companyLink} target="_blank"  rel="noopener noreferrer">View Website</Button>
                 </div>
             <div className="imageOverlay"></div>
            </div>

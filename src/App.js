@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import database  from './firebase'
+import axios from 'axios'
 import './App.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Toolbar from './components/Navigation/Toolbar/Toolbar'
@@ -11,29 +13,54 @@ import Resume from './components/Resume/Resume'
 import Footer from './components/Footer/Footer'
 
 function App() {
-  return (
-    <div>
-      <Toolbar />
-      <Hero />
-      <SectionHeader 
-        title="Hi, I am Brian."
-        content="I am an experienced Web Developer with a demonstrated history of working in a client-facing environment. 
-        I am skilled in WordPress, Shopify, HTML, CSS, and JavaScript. 
-        I am also currently learning and improve my skills in ReactJS and React Native. 
-         By the way, this site was built from scratch in ReactJS."
-        subContentHeading="Below are qualities I implement into all websites I work on."
-      />
-      <Services />
-      <SectionHeaderBGImage
-        title="Some of my Work Experience"
-        content="Below are some of the projects that I've worked on."
-        background="https://images.pexels.com/photos/3787308/pexels-photo-3787308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-      />
-      <Projects />
-      <Resume />
-      <Footer />
-    </div>
-  );
+
+  const [sectionHeader, setSectionHeader] = useState([]);
+  const [sectionHeaderBGImage, setSectionHeaderBGImage] = useState([]);
+  const [services, setServices] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [resume, setResume] = useState([]);
+    
+useEffect(() => {
+    const databaseUrl = database.ref();
+    axios.get(databaseUrl + ".json")
+      .then(res => {
+        setSectionHeader(res.data.sectionHeader);
+        setSectionHeaderBGImage(res.data.sectionHeaderBGImage);
+        setServices(res.data.services);
+        setProjects(res.data.projects);
+        setResume(res.data.resume);
+      })
+      .catch(err =>{
+        console.log(err);
+      });
+},[]);
+  
+    return (
+      <div>
+        <Toolbar />
+        <Hero />
+        
+        <SectionHeader 
+          title={sectionHeader.title}
+          content={sectionHeader.content}
+          subContentHeading={sectionHeader.subcontentHeading}
+        />
+        <Services servicesContent={services}/>
+        <SectionHeaderBGImage
+          title={sectionHeaderBGImage.title}
+          content={sectionHeaderBGImage.content}
+          background={sectionHeaderBGImage.background}
+        />
+        <Projects projectsContent={projects}/>
+        <Resume 
+          title={resume.title}
+          description={resume.description}
+          link={resume.link}
+        />
+        <Footer />
+      </div>
+    );
+  
 
 }
 

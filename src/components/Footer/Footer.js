@@ -19,13 +19,13 @@ const Footer = props => (
             <p className="footerSubNotes">Designed and handcoded by myself</p>
             <p className="footerSubNotes">
                 Website was made using&nbsp;
-                <a href="https://reactjs.org/" target="_blank">ReactJS</a>,&nbsp;
-                <a href="https://react-bootstrap.github.io/" target="_blank">React-Bootstrap</a>, and&nbsp;
-                <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">ReactJS</a>,&nbsp;
+                <a href="https://react-bootstrap.github.io/" target="_blank" rel="noopener noreferrer">React-Bootstrap</a>, and&nbsp;
+                <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>
             </p>
             <p className="footerSubNotes">
                 View the source code of the website&nbsp;
-                <a href="https://github.com/briantrang/portfolio" target="_blank">here</a>.
+                <a href="https://github.com/briantrang/portfolio" target="_blank" rel="noopener noreferrer">here</a>.
             </p>
             
         </div>

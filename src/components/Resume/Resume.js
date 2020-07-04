@@ -9,8 +9,8 @@ const Resume = props => {
         <div>
             <div className="resumeContainer">
                 <div className="p-3">
-                    <h2>Please feel free to view my resume below.</h2>
-                    <p>You'll be able read about my work experiences and projects in detail</p>
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
                 </div>
                 <Button style={{cursor: 'pointer'}} onClick={() => setShow(true)} >View my Resume</Button>
                 <Modal  
@@ -21,7 +21,7 @@ const Resume = props => {
                     <Modal.Header closeButton>
                     <Modal.Title className="modalTitle">
                         Brian Trang's Resume - 
-                        <a href="https://drive.google.com/file/d/1AxwFp25l1GtNYFJlPT4ZmBhROwiB8U02/preview"> 
+                        <a href={props.link} target="_blank" rel="noopener noreferrer"> 
                              &nbsp;Direct Link
                             </a>
                     </Modal.Title>
@@ -30,7 +30,7 @@ const Resume = props => {
                         <iframe 
                             className="iframe"
                             title="resume" 
-                            src="https://drive.google.com/file/d/1AxwFp25l1GtNYFJlPT4ZmBhROwiB8U02/preview" 
+                            src={props.link} 
                         > 
                         </iframe>
                     </Modal.Body>
