@@ -16,7 +16,7 @@ const SectionHeaderBGImage = React.lazy(() =>
 );
 const Projects = React.lazy(() => import("./components/Projects/Projects"));
 const Resume = React.lazy(() => import("./components/Resume/Resume"));
-// const Contact = React.lazy(() => import("./components/Contact/Contact"));
+const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const Footer = React.lazy(() => import("./components/Footer/Footer"));
 
 function App() {
@@ -81,11 +81,10 @@ function App() {
           link={resume.link}
         />
       </Suspense>
-      {/* TODO get Contact form and NodeJS backend running before using Contact component*/}
-      {/* 
+      
         <Suspense fallback={<p>Loading...</p>}>
           <Contact />
-        </Suspense> */}
+        </Suspense>
 
       <Suspense fallback={<p>Loading...</p>}>
         <Footer />
