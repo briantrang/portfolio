@@ -6,13 +6,20 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
+    "@sendgrid/mail": "^7.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "firebase": "^7.15.5",
     "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.4",
     "re-base": "^4.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -45,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gh-pages": "^3.1.0"
   }
 }

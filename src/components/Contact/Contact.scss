@@ -1,0 +1,58 @@
+@import "../../constants/Variables.scss";
+
+.contactContainer{
+    width: 100%;
+    min-height: 70vh;
+    font-family: $ubuntuFont;
+}
+
+.backgroundWave{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.icon{
+    display: flex;
+    font-size: 20vw;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: $primaryColor;
+}
+
+.contactDescription{
+    @media(max-width: 650px){
+        margin-top: 5rem;
+    }
+}
+
+.inputStyling{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid $primaryColor;
+    border-radius: 2rem;
+}
+.inputStyling:focus{
+    outline: none;
+}
+
+textarea{
+    min-height: 10rem;
+}
+
+.contactButton{
+    background-image: linear-gradient(to top left, $primaryColor, $secondaryColor);
+    border-radius: 2rem;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
