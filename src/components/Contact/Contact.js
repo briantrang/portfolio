@@ -60,6 +60,7 @@ const Contact = (props) => {
   };
 
   return (
+    //Contact Form SVG Waves
     <div className="contactContainer">
       <div className="backgroundWave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -79,52 +80,59 @@ const Contact = (props) => {
           ></path>
         </svg>
       </div>
+
+      {/* Contact Form Content */}
       <h1 className="contactTitle text-center">Want to get in touch?</h1>
-      <p className="contactDescription text-center">
+      <p className="contactDescription text-center p-3">
         Feel free to contact me so we can get a conversation going.
       </p>
-      <div className="row p-3">
-        <div className="col-12 col-lg-6 p-lg-5">
+      <div className="row formLayout">
+        <div className="col-12 d-sm-none">
           <i className="far fa-envelope-open icon"></i>
         </div>
-        <div className="col-12 col-lg-6 p-lg-5">
+        <div className="col-12">
           <form onSubmit={handleSubmit}>
-            <input
-              className="inputStyling"
-              type="text"
-              name="firstName"
-              value={firstName}
-              required
-              onChange={handleFirstName}
-              placeholder="First Name"
-            />
-            <input
-              className="inputStyling"
-              type="text"
-              name="lastName"
-              value={lastName}
-              onChange={handleLastName}
-              placeholder="Last Name"
-            />
-            <input
-              className="inputStyling"
-              type="input"
-              name="email"
-              value={email}
-              onChange={handleEmail}
-              placeholder="Email"
-            />
-            <textarea
-              className="inputStyling"
-              name="message"
-              value={message}
-              onChange={handleMessage}
-              placeholder="Message"
-            />
-            <Button type="submit" className="contactButton">
-              Send Message
-            </Button>
-
+            <div className="row">
+              <div className="col-12 col-lg-6">
+                <input
+                  className="inputStyling"
+                  type="text"
+                  name="firstName"
+                  value={firstName}
+                  required
+                  onChange={handleFirstName}
+                  placeholder="First Name"
+                />
+                <input
+                  className="inputStyling"
+                  type="text"
+                  name="lastName"
+                  value={lastName}
+                  onChange={handleLastName}
+                  placeholder="Last Name"
+                />
+                <input
+                  className="inputStyling"
+                  type="input"
+                  name="email"
+                  value={email}
+                  onChange={handleEmail}
+                  placeholder="Email"
+                />
+              </div>
+              <div className="col-12 col-lg-6">
+                <textarea
+                  className="inputStyling"
+                  name="message"
+                  value={message}
+                  onChange={handleMessage}
+                  placeholder="Message"
+                />
+              </div>
+              <Button type="submit" className="contactButton">
+                Send Message
+              </Button>
+            </div>
             <p
               className={
                 messageSuccess ? "messageSuccess text-center" : "messageHide"

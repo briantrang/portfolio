@@ -2,14 +2,20 @@
 
 .contactContainer{
     width: 100%;
-    min-height: 70vh;
+    min-height: 50vh;
     font-family: $ubuntuFont;
+    margin-bottom: 1rem;
 }
 
 .backgroundWave{
     position: absolute;
     width: 100%;
     z-index: -1;
+}
+
+.formLayout{
+    width: 100%;
+    margin: 0 auto;
 }
 
 .icon{
@@ -42,16 +48,19 @@
 }
 
 textarea{
-    min-height: 10rem;
+    min-height: 13.5rem;
 }
 
 .contactButton{
     background-image: linear-gradient(to top left, $primaryColor, $secondaryColor);
     border-radius: 2rem;
-    width: 100%;
+    width: 94%;
+    @media(min-width: $breakpoint-lg){
+        width: 50%;
+    }
     padding: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 0 auto;
     border: none;
     font-size: 1.3rem;
     font-weight: bold;

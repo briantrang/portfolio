@@ -9,6 +9,7 @@ import Tab from "@material-ui/core/Tab";
 import TabPanel from "../../UI/Tabs/TabPanel/TabPanel";
 import ReactProjectItems from "./PersonalProjectItems/React/ReactProjectItems";
 import ReactNativeProjectItems from "./PersonalProjectItems/ReactNative/ReactNativeProjectItems";
+import NegativeTopMargin from "../../Layout/NegativeTopMargin/NegativeTopMargin";
 
 const PersonalProjects = (props) => {
   TabPanel.propTypes = {
@@ -35,33 +36,35 @@ const PersonalProjects = (props) => {
   };
 
   return (
-    <div className="tabs">
-      <AppBar position="static">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          variant="fullWidth"
-          aria-label="nav tabs example"
-          className="appBar"
+    <NegativeTopMargin>
+      <div className="tabs">
+        <AppBar position="static">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            indicatorColor="primary"
+            variant="fullWidth"
+            aria-label="nav tabs example"
+            className="appBar"
+          >
+            <Tab className="tabTitle" label="React" {...a11yProps(0)} />
+            <Tab className="tabTitle" label="React Native" {...a11yProps(1)} />
+          </Tabs>
+        </AppBar>
+        <SwipeableViews
+          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          index={value}
+          onChangeIndex={handleChangeIndex}
         >
-          <Tab className="tabTitle" label="React" {...a11yProps(0)} />
-          <Tab className="tabTitle" label="React Native" {...a11yProps(1)} />
-        </Tabs>
-      </AppBar>
-      <SwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <ReactProjectItems />
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <ReactNativeProjectItems />
-        </TabPanel>
-      </SwipeableViews>
-    </div>
+          <TabPanel value={value} index={0} dir={theme.direction}>
+            <ReactProjectItems />
+          </TabPanel>
+          <TabPanel value={value} index={1} dir={theme.direction}>
+            <ReactNativeProjectItems />
+          </TabPanel>
+        </SwipeableViews>
+      </div>
+    </NegativeTopMargin>
   );
 };
 

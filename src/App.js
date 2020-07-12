@@ -30,6 +30,7 @@ function App() {
   const [services, setServices] = useState([]);
   const [projects, setProjects] = useState([]);
   const [resume, setResume] = useState([]);
+  const [personalProjects, setPersonalProjects] = useState([]);
 
   //call database and get data
   useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
         setServices(res.data.services);
         setProjects(res.data.projects);
         setResume(res.data.resume);
+        setPersonalProjects(res.data.personalProjects);
       })
       .catch((err) => {
         console.log(err);
@@ -87,6 +89,11 @@ function App() {
       </Suspense>
       
       <Suspense fallback={<p>Loading...</p>}>
+      <SectionHeader
+          title={personalProjects.title}
+          content={personalProjects.content}
+          subContentHeading={personalProjects.subcontentHeading}
+        />
         <PersonalProjects />
       </Suspense>
 
