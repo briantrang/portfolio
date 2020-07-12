@@ -14,7 +14,11 @@ const Services = React.lazy(() => import("./components/Services/Services"));
 const SectionHeaderBGImage = React.lazy(() =>
   import("./components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage")
 );
+
 const Projects = React.lazy(() => import("./components/Projects/Projects"));
+const PersonalProjects = React.lazy(() =>
+  import("./components/Projects/PersonalProjects/PersonalProjects")
+);
 const Resume = React.lazy(() => import("./components/Resume/Resume"));
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const Footer = React.lazy(() => import("./components/Footer/Footer"));
@@ -82,9 +86,13 @@ function App() {
         />
       </Suspense>
       
-        <Suspense fallback={<p>Loading...</p>}>
-          <Contact />
-        </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <PersonalProjects />
+      </Suspense>
+
+      <Suspense fallback={<p>Loading...</p>}>
+        <Contact />
+      </Suspense>
 
       <Suspense fallback={<p>Loading...</p>}>
         <Footer />

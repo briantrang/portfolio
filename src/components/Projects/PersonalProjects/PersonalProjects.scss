@@ -1,0 +1,31 @@
+@import "../../../constants/Variables.scss";
+
+.appBar {
+    background-color: $primaryColor;
+    color:black;
+ 
+}
+
+.appBar:focus{
+    outline: none;
+}
+
+.tabs {
+    flex-grow: 1;
+    width: 90vw;
+    margin: 0 auto;
+    background-color: transparent;
+    outline: none;
+    @media (min-width: $breakpoint-md) {
+        width: 60vw;
+    }
+}
+
+.tabTitle span{
+    font-size: 1.3rem;
+}
+
+//override Material UI tab wrapper font
+.MuiTab-wrapper {
+    font-family: $ubuntuFont;
+}

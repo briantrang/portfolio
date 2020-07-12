@@ -3,8 +3,6 @@ node_modules
 
 #ignore env
 .env
-serverpass.env
-serveruser.env
 
 #ignore build folder
 build

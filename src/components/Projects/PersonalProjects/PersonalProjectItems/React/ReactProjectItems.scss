@@ -1,0 +1,14 @@
+@import "../../../../../constants/Variables.scss";
+
+.cardDeck {
+    font-family: $ubuntuFont;
+    justify-content: center;
+}
+
+.cardSize {
+    max-width: 50%;
+    margin-bottom: 1rem !important;
+    @media (max-width: $breakpoint-sm) {
+        max-width: 100%;
+    }
+}
