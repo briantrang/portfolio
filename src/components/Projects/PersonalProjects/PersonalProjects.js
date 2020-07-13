@@ -28,7 +28,7 @@ const PersonalProjects = (props) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setValue(newValue); 
   };
 
   const handleChangeIndex = (index) => {
@@ -42,9 +42,8 @@ const PersonalProjects = (props) => {
           <Tabs
             value={value}
             onChange={handleChange}
-            indicatorColor="primary"
+            indicatorColor="secondary"
             variant="fullWidth"
-            aria-label="nav tabs example"
             className="appBar"
           >
             <Tab className="tabTitle" label="React" {...a11yProps(0)} />

@@ -2,16 +2,16 @@
 
 .appBar {
     background-color: white;
-    color:black;
- 
+    color: black;
 }
 
-.appBar:focus{
+.appBar:focus {
     outline: none;
 }
 
 .tabs {
     width: 90vw;
+    min-height: 60vh;
     margin: 0 auto;
     border: 1px solid #ccc;
     border-bottom-left-radius: 2rem;
@@ -19,10 +19,17 @@
     margin-bottom: 2rem;
     @media (min-width: $breakpoint-md) {
         width: 70vw;
+        min-height: 60vh;
+    }
+    @media (min-width: $breakpoint-lg) {
+        min-height: 70vh;
+    }
+    @media (min-width: $breakpoint-xl) {
+        min-height: 80vh;
     }
 }
 
-.tabTitle span{
+.tabTitle span {
     font-size: 1.3rem;
 }
 
