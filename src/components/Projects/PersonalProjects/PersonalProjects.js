@@ -34,13 +34,14 @@ const PersonalProjects = (props) => {
         <input
           type="input"
           className="form__field"
-          placeholder="Name"
+          id="searchProjects"
+          placeholder="Search Projects"
           value={searchValue}
           onChange={(event) => {
             setSearchValue(event.target.value);
           }}
         />
-        <label className="form__label">Search Projects</label>
+        <label for="searchProjects" className="form__label">Search Projects</label>
       </div>
 
       <CardDeck className="cardDeck text-center">
