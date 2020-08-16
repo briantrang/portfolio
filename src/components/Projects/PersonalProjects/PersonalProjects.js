@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import "./PersonalProjects.scss";
 import NegativeTopMargin from "../../Layout/NegativeTopMargin/NegativeTopMargin";
 import axios from "axios";
@@ -24,9 +24,10 @@ const PersonalProjects = (props) => {
   }, []);
 
   //filter out projectItems based off searchValue
-  let filteredItems = useCallback(projectItem.filter((item) => {
+
+  let filteredItems = projectItem.filter((item) => {
     return item.type.indexOf(searchValue) !== -1;
-  }),[projectItem, searchValue]);
+  });
 
   return (
     <NegativeTopMargin>
@@ -38,7 +39,7 @@ const PersonalProjects = (props) => {
           placeholder="Search Projects"
           value={searchValue}
           onChange={(event) => {
-            setSearchValue(event.target.value);
+            setSearchValue((event.target.value).toLowerCase());
           }}
         />
         <label for="searchProjects" className="form__label">Search Projects</label>
