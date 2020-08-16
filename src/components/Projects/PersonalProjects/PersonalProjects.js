@@ -24,9 +24,9 @@ const PersonalProjects = (props) => {
   }, []);
 
   //filter out projectItems based off searchValue
-  let filteredItems = projectItem.filter((item) => {
+  let filteredItems = useCallback(projectItem.filter((item) => {
     return item.type.indexOf(searchValue) !== -1;
-  });
+  }),[projectItem, searchValue]);
 
   return (
     <NegativeTopMargin>
