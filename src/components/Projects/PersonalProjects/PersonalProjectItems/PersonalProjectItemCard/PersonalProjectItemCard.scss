@@ -8,6 +8,9 @@
     @media (min-width: $breakpoint-xl) {
         max-width: 25%;
     }
+    @media (min-width: $breakpoint-md){
+        max-width: 50%
+    }
 }
 
 .card-subtitle {

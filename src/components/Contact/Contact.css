@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.contactContainer {
+  width: 100%;
+  min-height: 50vh;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.backgroundWave {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.formLayout {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #83f1c5;
+}
+
+@media (max-width: 650px) {
+  .contactDescription {
+    margin-top: 5rem;
+  }
+}
+
+.inputStyling {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #83f1c5;
+  border-radius: 2rem;
+}
+
+.inputStyling:focus {
+  outline: none;
+}
+
+textarea {
+  min-height: 13.5rem;
+}
+
+.contactButton {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#83f1c5), to(#83ddf1));
+  background-image: linear-gradient(to top left, #83f1c5, #83ddf1);
+  border-radius: 2rem;
+  width: 94%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin: 0 auto;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .contactButton {
+    width: 50%;
+  }
+}
+
+.messageSuccess {
+  color: #83f1c5;
+}
+
+.messageHide {
+  display: none !important;
+}
+/*# sourceMappingURL=Contact.css.map */

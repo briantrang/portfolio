@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./PersonalProjects.scss";
 import NegativeTopMargin from "../../Layout/NegativeTopMargin/NegativeTopMargin";
 import axios from "axios";
@@ -24,9 +24,9 @@ const PersonalProjects = (props) => {
   }, []);
 
   //filter out projectItems based off searchValue
-  let filteredItems = projectItem.filter((item) => {
+  let filteredItems = useCallback(projectItem.filter((item) => {
     return item.type.search(searchValue) !== -1;
-  });
+  }),[projectItem, searchValue]);
 
   return (
     <NegativeTopMargin>

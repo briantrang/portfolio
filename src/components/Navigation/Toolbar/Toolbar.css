@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.Toolbar {
+#Toolbar {
   height: 100px;
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +16,7 @@
 }
 
 @media (max-width: 500px) {
-  .Toolbar {
+  #Toolbar {
     height: 150px;
     display: block;
     text-align: center;
@@ -35,7 +34,7 @@
   }
 }
 
-.Toolbar nav {
+#Toolbar nav {
   height: 100%;
 }
 /*# sourceMappingURL=Toolbar.css.map */

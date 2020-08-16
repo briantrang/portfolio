@@ -19,6 +19,12 @@
   }
 }
 
+@media (max-height: 700px) {
+  .sectionContainer {
+    height: 75vh;
+  }
+}
+
 .sectionContent {
   width: 70%;
   height: 100%;

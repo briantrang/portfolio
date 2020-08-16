@@ -40,6 +40,12 @@
   }
 }
 
+@media (max-height: 400px) and (max-width: 900px) {
+  .heroContainer {
+    height: 60vh;
+  }
+}
+
 .heroText {
   position: absolute;
   width: 80vw;
@@ -79,7 +85,7 @@
 
 @media (min-width: 901px) and (max-width: 1024px) {
   .heroText p, .heroText span {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 

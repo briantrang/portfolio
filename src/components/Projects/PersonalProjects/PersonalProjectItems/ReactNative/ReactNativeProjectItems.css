@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.cardDeck {
+  font-family: "Ubuntu", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardSize {
+  max-width: 50%;
+  margin-bottom: 1rem !important;
+}
+
+@media (max-width: 576px) {
+  .cardSize {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=ReactNativeProjectItems.css.map */
