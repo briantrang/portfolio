@@ -1,13 +1,15 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "../../../../UI/Button/Button";
+import "./PersonalProjectItemCard.scss";
 
 const PersonalProjectItemCard = (props) => {
   return (
-    <Card className="cardSize text-center">
+    <Card className="card-size text-center">
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
+        <Card.Subtitle className="card-subtitle">{props.type}</Card.Subtitle>
         <Card.Text>{props.description}</Card.Text>
       </Card.Body>
       <Card.Footer>

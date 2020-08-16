@@ -1,5 +1,16 @@
-@import "../../../../constants/Variables.scss";
+@import "../../../../../constants/Variables.scss";
 
 .buttonColor {
     color: black;
+}
+
+.card-size {
+    @media (min-width: $breakpoint-xl) {
+        max-width: 25%;
+    }
+}
+
+.card-subtitle {
+    text-transform: capitalize;
+    color: #a9a9a9;
 }
