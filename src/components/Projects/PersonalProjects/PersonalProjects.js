@@ -25,7 +25,7 @@ const PersonalProjects = (props) => {
 
   //filter out projectItems based off searchValue
   let filteredItems = projectItem.filter((item) => {
-    return item.type.search(searchValue) !== -1;
+    return item.type.indexOf(searchValue) !== -1;
   });
 
   return (
