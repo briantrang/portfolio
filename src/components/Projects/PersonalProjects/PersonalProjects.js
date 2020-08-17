@@ -29,22 +29,13 @@ const PersonalProjects = (props) => {
     return item.type.indexOf(searchValue) !== -1;
   });
 
-  return (
-    <NegativeTopMargin>
-      <div className="form__group field">
-        <input
-          type="input"
-          className="form__field"
-          id="searchProjects"
-          placeholder="Search Projects"
-          value={searchValue}
-          onChange={(event) => {
-            setSearchValue((event.target.value).toLowerCase());
-          }}
-        />
-        <label for="searchProjects" className="form__label">Search Projects</label>
-      </div>
+  //create variable to render conditionally
+  let projectCards;
 
+  //conditionally render the projectCards based on if the search finds a match or not
+  //if match is found, render cards, else, render error message
+  if (filteredItems.length !== 0) {
+    projectCards = (
       <CardDeck className="cardDeck text-center">
         {filteredItems.map((item, i) => {
           return (
@@ -60,6 +51,33 @@ const PersonalProjects = (props) => {
           );
         })}
       </CardDeck>
+    );
+  } else {
+    projectCards = (
+      <h1 className="text-center p-2">
+        Sorry no items matches your search. Try Again.
+      </h1>
+    );
+  }
+
+  return (
+    <NegativeTopMargin>
+      <div className="form__group field">
+        <input
+          type="input"
+          className="form__field"
+          id="searchProjects"
+          placeholder="Search Projects"
+          value={searchValue}
+          onChange={(event) => {
+            setSearchValue(event.target.value.toLowerCase());
+          }}
+        />
+        <label for="searchProjects" className="form__label">
+          Search Projects
+        </label>
+      </div>
+      {projectCards}
     </NegativeTopMargin>
   );
 };
