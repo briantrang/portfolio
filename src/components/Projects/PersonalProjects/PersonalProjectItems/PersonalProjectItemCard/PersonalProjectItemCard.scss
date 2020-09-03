@@ -8,12 +8,16 @@
     @media (min-width: $breakpoint-xl) {
         max-width: 25%;
     }
-    @media (min-width: $breakpoint-md){
-        max-width: 50%
+    @media (min-width: $breakpoint-md) {
+        max-width: 50%;
     }
 }
 
 .card-subtitle {
     text-transform: capitalize;
     color: #a9a9a9;
+}
+
+.imgType {
+    width: 3rem;
 }

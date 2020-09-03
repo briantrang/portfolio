@@ -42,6 +42,7 @@ const PersonalProjects = (props) => {
             <PersonalProjectItemCard
               image={item.image}
               title={item.title}
+              imgType={item.imgType}
               type={item.type}
               description={item.description}
               demoUrl={item.demoUrl}
