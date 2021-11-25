@@ -1,22 +1,42 @@
-import React from 'react'
-import NavigationItem from './NavigationItem/NavigationItem'
-import './NavigationItems.scss'
+import React from "react";
+import NavigationItem from "./NavigationItem/NavigationItem";
+import "./NavigationItems.scss";
 
-const NavigationItems = props => (
-    <ul className="NavigationItems">
-        <NavigationItem
-            link="https://www.linkedin.com/in/brian-trang-912704119/">
-            <i className="fa fa-linkedin" aria-hidden="true"></i>
-        </NavigationItem>
-        <NavigationItem
-            link="https://github.com/briantrang">
-            <i className="fa fa-github" aria-hidden="true"></i>
-        </NavigationItem>
-        <NavigationItem
-            link="mailto:briantrang@ymail.com">
-            <i className="fa fa-envelope" aria-hidden="true"></i>
-        </NavigationItem>
-    </ul>
+const NavigationItems = (props) => (
+	<>
+		{!props.mobile && (
+			<ul className="nav-items">
+				<NavigationItem link="#about-me">
+					<span>About Me</span>
+				</NavigationItem>
+				<NavigationItem link="#experience">
+					<span>Experience</span>
+				</NavigationItem>
+				<NavigationItem link="#projects">
+					<span>Projects</span>
+				</NavigationItem>
+				<NavigationItem link="#contact" button>
+					<span>Contact Me</span>
+				</NavigationItem>
+			</ul>
+		)}
+		{props.mobile && (
+			<ul className="nav-mobile-items">
+				<NavigationItem link="#about-me" mobile>
+					<span>About Me</span>
+				</NavigationItem>
+				<NavigationItem link="#experience" mobile>
+					<span>Experience</span>
+				</NavigationItem>
+				<NavigationItem link="#projects" mobile>
+					<span>Projects</span>
+				</NavigationItem>
+				<NavigationItem link="#contact" button mobile>
+					<span>Contact Me</span>
+				</NavigationItem>
+			</ul>
+		)}
+	</>
 );
 
 export default NavigationItems;
