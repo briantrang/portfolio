@@ -25,6 +25,10 @@
             .hero-text-heading {
                 font-size: 45px;
                 font-weight: 700;
+
+                @media only screen and (min-width: $breakpoint-md) {
+                    font-size: 60px;
+                }
             }
             .hero-text-job {
                 font-size: 18px;
