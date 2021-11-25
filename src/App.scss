@@ -4,6 +4,7 @@
 // Portfolio container, replaces bootstrap
 body {
     font-family: $ralewayFont !important;
+    overflow-x: hidden;
 }
 .portfolio-container {
     max-width: 87.5%;
