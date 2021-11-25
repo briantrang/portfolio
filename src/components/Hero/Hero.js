@@ -12,6 +12,20 @@ const Hero = (props) => (
 				<p className="hero-text-job">
 					<ReactRoatingText items={["Full Stack Developer"]} />
 				</p>
+				<a
+					className="hero-social-icon"
+					href="https://www.linkedin.com/in/brian-trang-912704119/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<a className="hero-social-icon" href="https://github.com/briantrang" target="_blank" rel="noopener noreferrer">
+					<i class="fa fa-github"></i>
+				</a>
+				<a className="hero-social-icon" href="briantrang@ymail.com" target="_blank" rel="noopener noreferrer">
+					<i class="fa fa-envelope"></i>
+				</a>
 			</div>
 			<div class="hero-image-container">
 				<img className="hero-image" src={heroImage} alt="hero" />
@@ -19,5 +33,4 @@ const Hero = (props) => (
 		</div>
 	</div>
 );
-
 export default Hero;
