@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./PersonalProjects.scss";
 import axios from "axios";
 import database from "../../../firebase";
-import CardDeck from "react-bootstrap/CardDeck";
 import PersonalProjectItemCard from "./PersonalProjectItems/PersonalProjectItemCard/PersonalProjectItemCard";
-import ProjectItems from "../ProjectItems/ProjectItems";
 
 const PersonalProjects = (props) => {
 	const [projectItem, setProjectItem] = useState([]);
 	const [activeTab, setActiveTab] = useState("react");
-	const [searchValue, setSearchValue] = useState([]);
 
 	//Get project items
 	useEffect(() => {

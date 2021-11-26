@@ -8,9 +8,6 @@ import Hero from "./components/Hero/Hero";
 
 //Lazy loading components
 const SectionHeader = React.lazy(() => import("./components/SectionHeader/SectionHeader"));
-const SectionHeaderBGImage = React.lazy(() =>
-	import("./components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage")
-);
 
 const Projects = React.lazy(() => import("./components/Projects/Projects"));
 const PersonalProjects = React.lazy(() => import("./components/Projects/PersonalProjects/PersonalProjects"));
@@ -20,12 +17,9 @@ const Footer = React.lazy(() => import("./components/Footer/Footer"));
 
 function App() {
 	//database states
-	const [sectionHeader, setSectionHeader] = useState([]);
-	const [sectionHeaderBGImage, setSectionHeaderBGImage] = useState([]);
-	const [services, setServices] = useState([]);
+
 	const [projects, setProjects] = useState([]);
 	const [resume, setResume] = useState([]);
-	const [personalProjects, setPersonalProjects] = useState([]);
 
 	//call database and get data
 	useEffect(() => {
@@ -33,12 +27,8 @@ function App() {
 		axios
 			.get(databaseUrl + ".json")
 			.then((res) => {
-				setSectionHeader(res.data.sectionHeader);
-				setSectionHeaderBGImage(res.data.sectionHeaderBGImage);
-				setServices(res.data.services);
 				setProjects(res.data.projects);
 				setResume(res.data.resume);
-				setPersonalProjects(res.data.personalProjects);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -73,7 +63,14 @@ function App() {
 				</div>
 			</Suspense>
 			<Suspense fallback={<p>Loading...</p>}>
-				<Contact />
+				<div className="alt-background">
+					<SectionHeader
+						eyebrow=""
+						heading="Get in Contact"
+						body="Feel free to contact me so we can get a conversation going."
+					/>
+					<Contact />
+				</div>
 			</Suspense>
 
 			<Suspense fallback={<p>Loading...</p>}>

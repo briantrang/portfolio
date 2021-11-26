@@ -1,75 +1,119 @@
 @import "../../constants/Variables.scss";
 
-.contactContainer{
-    width: 100%;
-    min-height: 50vh;
-    font-family: $ubuntuFont;
-    margin-bottom: 1rem;
-}
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    padding-top: 2rem;
 
-.backgroundWave{
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-}
+    @media only screen and (min-width: $breakpoint-md) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+    }
 
-.formLayout{
-    width: 100%;
-    margin: 0 auto;
-}
+    .contact-info {
+        .contact-field {
+            position: relative;
+            .contact-input {
+                border: 1px solid #d2d2d7;
+                border-radius: 10px;
+                width: 100%;
+                height: 50px;
+                position: relative;
+                top: 0;
+                left: 0;
+                padding-left: 1rem;
+                padding-top: 1.2rem;
+                margin-bottom: 15px;
+            }
+            &:last-child {
+                .contact-input {
+                    margin-bottom: 0;
+                }
+            }
+            .contact-label {
+                position: absolute;
+                left: 0;
+                top: 0.9rem;
+                padding: 0 0.5rem;
 
-.icon{
-    display: flex;
-    font-size: 16vw;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: $primaryColor;
-}
+                cursor: text;
+                transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+            }
+            .contact-input:focus ~ .contact-label,
+            .contact-input:not(:placeholder-shown).contact-input:not(:focus) ~ .contact-label {
+                top: 0.2rem;
+                font-size: 0.8rem;
+                left: 0.5rem;
+            }
+        }
+    }
+    .contact-message {
+        position: relative;
+        border: 1px solid #d2d2d7;
+        border-radius: 10px;
+        background: white;
+        &:focus-within {
+            outline: #015fcc auto 1px;
+        }
+        textarea.contact-message-input {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 99%;
+            height: 150px;
+            border-radius: 10px;
+            border: transparent;
+            position: relative;
+            padding-left: 1rem;
+            padding-top: -0.5rem;
+            margin-top: 20px;
+            margin-left: 1px;
 
-.contactDescription{
-    @media(max-width: 650px){
-        margin-top: 5rem;
+            resize: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        textarea::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+        .contact-label {
+            position: absolute;
+            left: 0;
+            top: 0.9rem;
+            padding: 0 0.5rem;
+
+            cursor: text;
+            transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+        }
+        .contact-message-input:focus ~ .contact-label,
+        .contact-message-input:not(:placeholder-shown).contact-message-input:not(:focus) ~ .contact-label {
+            top: 0.2rem;
+            font-size: 0.8rem;
+            left: 0.5rem;
+        }
+    }
+    .contact-button-container {
+        text-align: center;
+        .contact-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            border-radius: 25px;
+            width: 100%;
+        }
     }
 }
 
-.inputStyling{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 2px solid $primaryColor;
-    border-radius: 2rem;
-}
-.inputStyling:focus{
-    outline: none;
-}
-
-textarea{
-    min-height: 13.5rem;
-}
-
-.contactButton{
-    background-image: linear-gradient(to top left, $primaryColor, $secondaryColor);
-    border-radius: 2rem;
-    width: 94%;
-    @media(min-width: $breakpoint-lg){
-        width: 50%;
-    }
-    padding: 1rem;
-    margin-top: 1rem;
-    margin: 0 auto;
-    border: none;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.messageSuccess{
-    color: $primaryColor;
-}
-
-.messageHide{
-    display: none!important;
+.messageHide {
+    display: none !important;
 }

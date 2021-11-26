@@ -1,6 +1,5 @@
 import React from "react";
 import "./ProjectItems.scss";
-import Button from "../../UI/Button/Button";
 
 const ProjectItems = (props) => (
 	<div className="project-item-card card">

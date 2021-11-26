@@ -1,6 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "../../../../UI/Button/Button";
 import "./PersonalProjectItemCard.scss";
 
 const PersonalProjectItemCard = (props) => {
