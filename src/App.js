@@ -8,7 +8,6 @@ import Hero from "./components/Hero/Hero";
 
 //Lazy loading components
 const SectionHeader = React.lazy(() => import("./components/SectionHeader/SectionHeader"));
-const Services = React.lazy(() => import("./components/Services/Services"));
 const SectionHeaderBGImage = React.lazy(() =>
 	import("./components/SectionHeader/SectionHeaderBGImage/SectionHeaderBGImage")
 );
@@ -55,16 +54,18 @@ function App() {
 			</Suspense>
 
 			<Suspense fallback={<p>Loading...</p>}>
-				<SectionHeader
-					title={sectionHeader.title}
-					content={sectionHeader.content}
-					subContentHeading={sectionHeader.subcontentHeading}
-				/>
+				<div className="alt-background">
+					<SectionHeader
+						eyebrow="Projects"
+						heading="Work Experience"
+						body="Below are some of the projects that I've worked on."
+					/>
+				</div>
 			</Suspense>
 
-			<Suspense fallback={<p>Loading...</p>}>
+			{/* <Suspense fallback={<p>Loading...</p>}>
 				<Services servicesContent={services} />
-			</Suspense>
+			</Suspense> */}
 
 			<Suspense fallback={<p>Loading...</p>}>
 				<SectionHeaderBGImage
