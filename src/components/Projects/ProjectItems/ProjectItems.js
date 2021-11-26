@@ -1,22 +1,20 @@
-import React from 'react'
-import './ProjectItems.scss'
-import Button from '../../UI/Button/Button'
+import React from "react";
+import "./ProjectItems.scss";
+import Button from "../../UI/Button/Button";
 
-const ProjectItems = props => (
-
-    <div className="custom-col-12 custom-col-sm-6 custom-col-xl-3 p-3">
-        <div className="projectItemContainer">
-            <div className="image">
-                <img className="projectImage" src={props.background} alt="Company BG"/>
-                <div className="companyDetails fadeInBottom">
-                    <p className="companyInfo">{props.aboutCompany}</p>
-                    <Button link={props.companyLink} target="_blank"  rel="noopener noreferrer">View Website</Button>
-                </div>
-            <div className="imageOverlay"></div>
-           </div>
-        </div>
-    </div>
-
+const ProjectItems = (props) => (
+	<div className="project-item-card card">
+		<img className="project-image card-img-top" src={props.background} alt="Company BG" />
+		<div className="project-content card-bod">
+			<div className="project-company-name">{props.companyName}</div>
+			<div className="project-company-info">{props.aboutCompany}</div>
+			<button className="project-company-link">
+				<a href={props.companyLink} target="_blank" rel="noopener noreferrer">
+					View Website <span className="chevron"></span>
+				</a>
+			</button>
+		</div>
+	</div>
 );
 
 export default ProjectItems;

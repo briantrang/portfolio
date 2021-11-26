@@ -12,15 +12,18 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-    @media only screen and (min-width: $breakpoint-md){
+    @media only screen and (min-width: $breakpoint-md) {
         max-width: 692px;
     }
 
-    @media only screen and (min-width: $breakpoint-lg){
+    @media only screen and (min-width: $breakpoint-lg) {
         max-width: 980px;
     }
 }
 
+.primary-background {
+    padding: 5rem 0 5rem 0;
+}
 .alt-background {
     background-color: #f5f5f7;
     padding: 5rem 0 5rem 0;

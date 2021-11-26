@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 15px;
-    padding: 5rem 0 5rem 0;
 
     @media only screen and (min-width: $breakpoint-md) {
         grid-template-columns: 1fr 2fr;

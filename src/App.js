@@ -50,44 +50,28 @@ function App() {
 			<Toolbar />
 			<Hero />
 			<Suspense fallback={<p>Loading...</p>}>
-				<Resume title={resume.title} description={resume.description} link={resume.link} />
+				<div className="primary-background">
+					<Resume title={resume.title} description={resume.description} link={resume.link} />
+				</div>
 			</Suspense>
 
 			<Suspense fallback={<p>Loading...</p>}>
 				<div className="alt-background">
-					<SectionHeader
-						eyebrow="Projects"
-						heading="Work Experience"
-						body="Below are some of the projects that I've worked on."
-					/>
+					<SectionHeader eyebrow="Clients" heading="Work Experience" body="Below are some of my clients." />
+					<Projects projectsContent={projects} />
 				</div>
 			</Suspense>
 
-			{/* <Suspense fallback={<p>Loading...</p>}>
-				<Services servicesContent={services} />
-			</Suspense> */}
-
 			<Suspense fallback={<p>Loading...</p>}>
-				<SectionHeaderBGImage
-					title={sectionHeaderBGImage.title}
-					content={sectionHeaderBGImage.content}
-					background={sectionHeaderBGImage.background}
-				/>
+				<div className="primary-background">
+					<SectionHeader
+						eyebrow="Coding"
+						heading="Personal Projects"
+						body="Below are some of the projects I've done to improve as a developer."
+					/>
+					<PersonalProjects />
+				</div>
 			</Suspense>
-
-			<Suspense fallback={<p>Loading...</p>}>
-				<Projects projectsContent={projects} />
-			</Suspense>
-
-			<Suspense fallback={<p>Loading...</p>}>
-				<SectionHeader
-					title={personalProjects.title}
-					content={personalProjects.content}
-					subContentHeading={personalProjects.subcontentHeading}
-				/>
-				<PersonalProjects />
-			</Suspense>
-
 			<Suspense fallback={<p>Loading...</p>}>
 				<Contact />
 			</Suspense>

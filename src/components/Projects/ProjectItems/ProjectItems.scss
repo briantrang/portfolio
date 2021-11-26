@@ -1,90 +1,60 @@
-@import '../../../constants/Variables.scss';
+@import "../../../constants/Variables.scss";
 
+.project-item-card {
+    border-radius: 25px;
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
 
-.custom-col-12 {
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-}
-@media (min-width: 576px){
-    .custom-col-sm-6 {
-        position: relative;
-        flex: 0 0 50%;
-        width: 50%;
+    .project-content {
+        background-color: white;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 0 2.5rem 0;
+        margin: auto 0;
+
+        .project-company-name {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .project-company-info {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .project-company-link {
+            background-color: transparent;
+            border: none;
+            color: $linkColor;
+            .chevron {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+
+                position: relative;
+                &::after {
+                    content: "";
+                    border-right: 1px solid $linkColor;
+                    border-bottom: 1px solid $linkColor;
+                    width: 50%;
+                    height: 50%;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 65%;
+                    -webkit-transform: translate(-30%, -50%) rotate(-45deg);
+                    -ms-transform: translate(-30%, -50%) rotate(-45deg);
+                    -o-transform: translate(-30%, -50%) rotate(-45deg);
+                    transform: translate(-30%, -50%) rotate(-45deg);
+                }
+            }
+        }
     }
 }
-@media (min-width: 1400px){
-    .custom-col-xl-3 {
-        position: relative;
-        flex: 0 0 25%;
-        width: 25%;
-    }
-}
-.projectItemContainer{
-    border-radius: 1.5rem;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.projectImage{
-    width: 100%;
-    border-radius: 1.5rem; 
-    overflow: hidden;
-}
-
-.imageOverlay{
-    border-radius: 1.5rem;
-    padding: 16px;
-}
-.projectItemContainer .imageOverlay {
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-  }
-   
-  .projectItemContainer:hover .imageOverlay{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-
-  }
-
-  .companyDetails{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    z-index: 10;
-    font-family: $ubuntuFont;
-  }
-
-  .companyInfo{
-      color: white;
-      padding: .5rem;
-  }
-
-  .projectItemContainer:hover .companyDetails{
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
-   
-  .fadeInBottom{
-    top: 80%;
-  }
