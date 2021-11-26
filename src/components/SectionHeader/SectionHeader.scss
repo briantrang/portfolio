@@ -9,7 +9,10 @@
     }
 
     .section-header-heading {
-        font-size: 50px;
+        font-size: 40px;
+        @media only screen and (min-width: $breakpoint-md) {
+            font-size: 50px;
+        }
         font-weight: 700;
         line-height: 50px;
     }
