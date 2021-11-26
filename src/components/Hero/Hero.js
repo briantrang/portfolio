@@ -10,7 +10,7 @@ const Hero = (props) => (
 				<p className="hero-text-eyebrow">Hi, I am</p>
 				<p className="hero-text-heading">Brian Trang</p>
 				<p className="hero-text-job">
-					<ReactRoatingText items={["Full Stack Developer"]} />
+					<ReactRoatingText items={["Full Stack Engineer", "Web Developer"]} />
 				</p>
 				<a
 					className="hero-social-icon"
@@ -27,6 +27,7 @@ const Hero = (props) => (
 					<i className="fa fa-envelope"></i>
 				</a>
 			</div>
+
 			<div className="hero-image-container">
 				<img className="hero-image" src={heroImage} alt="hero" />
 			</div>

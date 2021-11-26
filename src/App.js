@@ -17,7 +17,6 @@ const Footer = React.lazy(() => import("./components/Footer/Footer"));
 
 function App() {
 	//database states
-
 	const [timeline, setTimeline] = useState([]);
 	const [projects, setProjects] = useState([]);
 	const [resume, setResume] = useState([]);
