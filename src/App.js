@@ -8,8 +8,8 @@ import Hero from "./components/Hero/Hero";
 
 //Lazy loading components
 const SectionHeader = React.lazy(() => import("./components/SectionHeader/SectionHeader"));
-
 const Projects = React.lazy(() => import("./components/Projects/Projects"));
+const Timeline = React.lazy(() => import("./components/Timeline/Timeline"));
 const PersonalProjects = React.lazy(() => import("./components/Projects/PersonalProjects/PersonalProjects"));
 const Resume = React.lazy(() => import("./components/Resume/Resume"));
 const Contact = React.lazy(() => import("./components/Contact/Contact"));
@@ -18,6 +18,7 @@ const Footer = React.lazy(() => import("./components/Footer/Footer"));
 function App() {
 	//database states
 
+	const [timeline, setTimeline] = useState([]);
 	const [projects, setProjects] = useState([]);
 	const [resume, setResume] = useState([]);
 
@@ -27,6 +28,7 @@ function App() {
 		axios
 			.get(databaseUrl + ".json")
 			.then((res) => {
+				setTimeline(res.data.timeline);
 				setProjects(res.data.projects);
 				setResume(res.data.resume);
 			})
@@ -54,6 +56,13 @@ function App() {
 
 			<Suspense fallback={<p>Loading...</p>}>
 				<div className="primary-background">
+					<SectionHeader eyebrow="Milestones" heading="Timeline" body="A brief timeline of my experiences." />
+					<Timeline timelineArray={timeline} />
+				</div>
+			</Suspense>
+
+			<Suspense fallback={<p>Loading...</p>}>
+				<div className="alt-background">
 					<SectionHeader
 						eyebrow="Coding"
 						heading="Personal Projects"
@@ -63,7 +72,7 @@ function App() {
 				</div>
 			</Suspense>
 			<Suspense fallback={<p>Loading...</p>}>
-				<div className="alt-background">
+				<div className="primary-background">
 					<SectionHeader
 						eyebrow=""
 						heading="Get in Contact"

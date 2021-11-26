@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.NavigationItem {
-  height: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+.nav-item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -11,9 +11,49 @@
           align-items: center;
 }
 
-.NavigationItem:hover,
-.NavigationItem:active,
-.NavigationItem.active {
-  color: red;
+.nav-item a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-item a:hover {
+  color: white;
+}
+
+.nav-mobile-item {
+  padding: 0.5rem 0 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.nav-mobile-item a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav-mobile-item a:hover {
+  color: white;
+}
+
+.nav-mobile-item:last-child {
+  border-bottom: none;
+}
+
+.nav-button {
+  background-color: white;
+  height: 40px;
+  border-radius: 30px;
+  margin-left: 1rem;
+}
+
+.nav-button a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-button a:hover {
+  color: black;
 }
 /*# sourceMappingURL=NavigationItem.css.map */

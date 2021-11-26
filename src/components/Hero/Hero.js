@@ -18,16 +18,16 @@ const Hero = (props) => (
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<i class="fa fa-linkedin"></i>
+					<i className="fa fa-linkedin"></i>
 				</a>
 				<a className="hero-social-icon" href="https://github.com/briantrang" target="_blank" rel="noopener noreferrer">
-					<i class="fa fa-github"></i>
+					<i className="fa fa-github"></i>
 				</a>
 				<a className="hero-social-icon" href="briantrang@ymail.com" target="_blank" rel="noopener noreferrer">
-					<i class="fa fa-envelope"></i>
+					<i className="fa fa-envelope"></i>
 				</a>
 			</div>
-			<div class="hero-image-container">
+			<div className="hero-image-container">
 				<img className="hero-image" src={heroImage} alt="hero" />
 			</div>
 		</div>

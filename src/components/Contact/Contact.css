@@ -1,87 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.contactContainer {
-  width: 100%;
-  min-height: 50vh;
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 1rem;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+.contact-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 15px;
+  padding-top: 2rem;
 }
 
-.backgroundWave {
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-.formLayout {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 16vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  color: #83f1c5;
-}
-
-@media (max-width: 650px) {
-  .contactDescription {
-    margin-top: 5rem;
+@media only screen and (min-width: 786px) {
+  .contact-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
   }
 }
 
-.inputStyling {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 2px solid #83f1c5;
-  border-radius: 2rem;
+.contact-container .contact-info .contact-field {
+  position: relative;
 }
 
-.inputStyling:focus {
+.contact-container .contact-info .contact-field .contact-input {
+  border: 1px solid #d2d2d7;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-left: 1rem;
+  padding-top: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.contact-container .contact-info .contact-field:last-child .contact-input {
+  margin-bottom: 0;
+}
+
+.contact-container .contact-info .contact-field .contact-label {
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  -webkit-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.contact-container .contact-info .contact-field .contact-input:focus ~ .contact-label,
+.contact-container .contact-info .contact-field .contact-input:not(:placeholder-shown).contact-input:not(:focus) ~ .contact-label {
+  top: 0.2rem;
+  font-size: 0.8rem;
+  left: 0.5rem;
+}
+
+.contact-container .contact-message {
+  position: relative;
+  border: 1px solid #d2d2d7;
+  border-radius: 10px;
+  background: white;
+}
+
+.contact-container .contact-message:focus-within {
+  outline: #015fcc auto 1px;
+}
+
+.contact-container .contact-message textarea.contact-message-input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 99%;
+  height: 150px;
+  border-radius: 10px;
+  border: transparent;
+  position: relative;
+  padding-left: 1rem;
+  padding-top: -0.5rem;
+  margin-top: 20px;
+  margin-left: 1px;
+  resize: none;
+}
+
+.contact-container .contact-message textarea.contact-message-input:focus {
   outline: none;
 }
 
-textarea {
-  min-height: 13.5rem;
+.contact-container .contact-message textarea::-webkit-scrollbar {
+  width: 3px;
 }
 
-.contactButton {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#83f1c5), to(#83ddf1));
-  background-image: linear-gradient(to top left, #83f1c5, #83ddf1);
-  border-radius: 2rem;
-  width: 94%;
-  padding: 1rem;
-  margin-top: 1rem;
-  margin: 0 auto;
+.contact-container .contact-message textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.contact-container .contact-message .contact-label {
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  cursor: text;
+  -webkit-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.contact-container .contact-message .contact-message-input:focus ~ .contact-label,
+.contact-container .contact-message .contact-message-input:not(:placeholder-shown).contact-message-input:not(:focus) ~ .contact-label {
+  top: 0.2rem;
+  font-size: 0.8rem;
+  left: 0.5rem;
+}
+
+.contact-container .contact-button-container {
+  text-align: center;
+}
+
+.contact-container .contact-button-container .contact-button {
+  background-color: #007bff;
   border: none;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-@media (min-width: 992px) {
-  .contactButton {
-    width: 50%;
-  }
-}
-
-.messageSuccess {
-  color: #83f1c5;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
 }
 
 .messageHide {
