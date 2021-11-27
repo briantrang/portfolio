@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.scss";
 import ReactRoatingText from "react-rotating-text";
 import heroImage from "../../assets/images/svg/coder.svg";
+import { CSSTransition } from "react-transition-group";
 
 const Hero = (props) => (
 	<div className="heroContainer">
@@ -27,9 +28,10 @@ const Hero = (props) => (
 					<i className="fa fa-envelope"></i>
 				</a>
 			</div>
-
 			<div className="hero-image-container">
-				<img className="hero-image" src={heroImage} alt="hero" />
+				<CSSTransition in={true} appear={true} timeout={3000} classNames="fade">
+					<img className="hero-image" src={heroImage} alt="hero" />
+				</CSSTransition>
 			</div>
 		</div>
 	</div>
