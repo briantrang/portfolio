@@ -41,13 +41,13 @@ function App() {
 			<Toolbar />
 			<Hero />
 			<Suspense fallback={<p>Loading...</p>}>
-				<div className="primary-background">
+				<div id="#about-me" className="primary-background">
 					<Resume title={resume.title} description={resume.description} link={resume.link} />
 				</div>
 			</Suspense>
 
 			<Suspense fallback={<p>Loading...</p>}>
-				<div className="alt-background">
+				<div id="#experience" className="alt-background">
 					<SectionHeader eyebrow="Clients" heading="Work Experience" body="Below are some of my clients." />
 					<Projects projectsContent={projects} />
 				</div>
@@ -61,7 +61,7 @@ function App() {
 			</Suspense>
 
 			<Suspense fallback={<p>Loading...</p>}>
-				<div className="alt-background">
+				<div id="#projects" className="alt-background">
 					<SectionHeader
 						eyebrow="Coding"
 						heading="Personal Projects"
@@ -71,7 +71,7 @@ function App() {
 				</div>
 			</Suspense>
 			<Suspense fallback={<p>Loading...</p>}>
-				<div className="primary-background">
+				<div id="#contact" className="primary-background">
 					<SectionHeader
 						eyebrow=""
 						heading="Get in Contact"

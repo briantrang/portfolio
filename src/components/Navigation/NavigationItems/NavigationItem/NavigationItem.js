@@ -1,11 +1,14 @@
 import React from "react";
 import "./NavigationItem.scss";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const NavigationItem = (props) => (
 	<>
 		{!props.mobile && (
 			<li className={props.button ? "nav-item nav-button" : "nav-item"}>
-				<a href={props.link}>{props.children}</a>
+				<AnchorLink offset="100" href={"/" + props.link}>
+					{props.children}
+				</AnchorLink>
 			</li>
 		)}
 		{props.mobile && (
