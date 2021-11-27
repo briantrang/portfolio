@@ -13,7 +13,9 @@ const NavigationItem = (props) => (
 		)}
 		{props.mobile && (
 			<li className="nav-mobile-item">
-				<a href={props.link}>{props.children}</a>
+				<AnchorLink offset="100" href={"/" + props.link}>
+					{props.children}
+				</AnchorLink>
 			</li>
 		)}
 	</>
