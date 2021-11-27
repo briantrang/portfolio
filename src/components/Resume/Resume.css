@@ -1,11 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-.resumeContainer {
-  width: 100vw;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+.resume-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 15px;
+}
+
+@media only screen and (min-width: 786px) {
+  .resume-content {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+}
+
+.resume-content .resume-heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.resume-content .resume-body {
+  color: #86868b;
+  font-weight: 600;
+}
+
+.resume-content .resume-button {
+  border: none;
+  background-color: transparent;
+  color: #0066cc;
+  padding: 1rem 0 0 0;
 }
 
 .buttonStyle {

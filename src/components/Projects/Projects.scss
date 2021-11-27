@@ -1,13 +1,13 @@
-@import '../../constants/Variables.scss';
+@import "../../constants/Variables.scss";
 
-.sectionProjectsContainer{
-    width: 90vw;
-    margin: 0 auto;
-}
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    padding-top: 2rem;
 
-.customRow{
-    display:flex;
-    flex-wrap: wrap;
-
-    flex-basis: 20%;
+    @media only screen and (min-width: $breakpoint-md) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+    }
 }

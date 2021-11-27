@@ -1,22 +1,16 @@
-@import '../../../constants/Variables.scss';
+@import "../../../constants/Variables.scss";
 
-.NavigationItems {
-    margin: 0!important;
-    padding: 0;
-    list-style: none;
-    display: inliflex;
-    align-items: center;
-    height: 100px;
-    flex-flow: column;
-}
-
-.NavigationItems i {
-    color: $secondaryColor;
-    font-size: 2rem;
-}
-
-@media (min-width: 500px){
-    .NavigationItems {
-        flex-flow: row;
+.nav-items {
+    display: none;
+    @media only screen and (min-width: $breakpoint-md) {
+        display: block;
+        margin-top: 1rem;
+        padding-left: 0;
     }
+}
+
+.nav-mobile-items {
+    list-style: none;
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 0;
 }

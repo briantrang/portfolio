@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-#Toolbar {
-  height: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+.nav-bar {
+  height: 75px;
   width: 100%;
+  background-color: black;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -9,32 +11,66 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 90;
 }
 
-@media (max-width: 500px) {
-  #Toolbar {
-    height: 150px;
-    display: block;
-    text-align: center;
+@media only screen and (min-width: 786px) {
+  .nav-bar {
+    height: 100px;
   }
 }
 
-.Logo, .socialIcons {
-  height: 80%;
-  color: red;
+.nav-main {
+  margin: auto;
 }
 
-@media (max-width: 500px) {
-  .Logo, .socialIcons {
-    height: 40%;
+.nav-mobile-main {
+  background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
+  z-index: 90;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+@media only screen and (min-width: 786px) {
+  .nav-mobile-main {
+    display: none;
   }
 }
 
-#Toolbar nav {
-  height: 100%;
+.nav-toggler {
+  width: 48px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px 10px 0;
+  cursor: pointer;
+  margin: auto 0;
+}
+
+.nav-toggler div {
+  width: 90%;
+  height: 1px;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 786px) {
+  .nav-toggler {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Toolbar.css.map */

@@ -1,66 +1,27 @@
 @import "../../../constants/Variables.scss";
 
-
-.form__group {
-    position: relative;
-    margin: auto;
-    margin-top: -4rem;
-    margin-bottom: 1rem;
-    width: 70%;
-}
-
-.form__field {
-    font-family: $ubuntuFont;
-    width: 100%;
-    border: 0;
+.project-tabs {
+    text-align: center;
+    padding: 2rem 0 0.5rem 0;
     border-bottom: 1px solid black;
-    outline: 0;
-    font-size: 1.3rem;
-    color: black;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
 
-    &::placeholder {
-        color: transparent;
+    .project-button {
+        background-color: transparent;
+        border: none;
+        text-transform: capitalize;
+        color: $grayColor;
+
+        &:focus {
+            outline: none;
+        }
+        &:focus-visible {
+            outline: #015fcc auto 1px;
+        }
     }
-
-    &:placeholder-shown ~ .form__label {
-        font-size: 1.3rem;
-        cursor: text;
-        top: 20px;
-    }
-}
-
-.form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 0.5rem;
-    font-family: $ubuntuFont;
-    color: black;
-}
-
-.form__field:focus {
-    ~ .form__label {
-        position: absolute;
-        top: -15px;
-        display: block;
-        transition: 0.2s;
-        font-size: 1rem;
-        font-family: $ubuntuFont;
+    button.project-button.active {
         color: black;
-        font-weight: 700;
     }
-    padding-bottom: 6px;
-    font-weight: 700;
-    border-width: 1px;
-    border-image-slice: 1;
-}
-
-.card-deck {
-    justify-content: center;
-    margin-bottom: 1rem;
 }

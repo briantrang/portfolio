@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
 
 //Site Colors
 $primaryColor: #83f1c5;
 $secondaryColor: #83ddf1;
 $accentColor: #83f2f1;
+$grayColor: #86868b;
+$linkColor: #0066cc;
 
 //Site Fonts
-$ubuntuFont: 'Ubuntu', sans-serif;
+$ubuntuFont: "Ubuntu", sans-serif;
+$ralewayFont: "Raleway", sans-serif;
 
-//Bootstrap 4 breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+//Custom 4 breakpoints
+$breakpoint-sm: 320px;
+$breakpoint-md: 786px;
+$breakpoint-lg: 1069px;
+$breakpoint-xl: 1441px;
+$breakpoint-xxl: 2000px;
