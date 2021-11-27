@@ -29,7 +29,7 @@
             height: 15px;
             position: absolute;
             top: calc(50% - 7.5px);
-            right: -7.5px;
+            right: -8px;
             transform: rotate(45deg);
         }
 
@@ -49,6 +49,20 @@
         .timeline-role {
             color: #86868b;
             padding-bottom: 1rem;
+        }
+
+        .timeline-button {
+            background-color: transparent;
+            border: none;
+            color: $linkColor;
+            padding: 0;
+
+            &:focus {
+                outline: none;
+            }
+            &:focus-visible {
+                outline: #015fcc auto 1px;
+            }
         }
 
         .timeline-circle {
@@ -85,7 +99,7 @@
                 height: 15px;
                 position: absolute;
                 top: calc(50% - 7.5px);
-                left: -7.5px;
+                left: -8px;
                 transform: rotate(-135deg);
             }
 

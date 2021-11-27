@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TimelineItem.scss";
 
 const TimelineItem = (props) => {
+	const [showBody, setShowBody] = useState(false);
+
 	return (
 		<div className="timeline-item-container">
 			<div className="timeline-item-content">
@@ -10,7 +12,10 @@ const TimelineItem = (props) => {
 				</div>
 				<div className="timeline-heading">{props.heading}</div>
 				<div className="timeline-role">{props.role}</div>
-				<div className="timeline-body">{props.body}</div>
+				{showBody && <div className="timeline-body">{props.body}</div>}
+				<button className="timeline-button" onClick={() => setShowBody(!showBody)}>
+					Read More
+				</button>
 				<div className="timeline-circle"></div>
 			</div>
 		</div>

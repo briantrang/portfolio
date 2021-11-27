@@ -3,10 +3,13 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import "./Toolbar.scss";
 
 const Toolbar = (props) => {
-	// window.onscroll = function () {
-	// 	scrollFunction();
-	// };
 	const [showMobile, setShowMobile] = useState(false);
+	window.onscroll = function () {
+		scrollFunction();
+		if (showMobile) {
+			scrollFunctionMobile();
+		}
+	};
 
 	return (
 		<>
@@ -21,21 +24,27 @@ const Toolbar = (props) => {
 				</div>
 			</nav>
 			{showMobile && (
-				<div className="nav-mobile-main">
+				<div id="mobile-menu" className="nav-mobile-main">
 					<NavigationItems mobile />
 				</div>
 			)}
 		</>
 	);
 
-	// function scrollFunction() {
-	// 	if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-	// 		document.getElementById("toolbar").style.background = "rgba(255, 255, 255, 0.9)";
-	// 		document.getElementById("toolbar").style.paddingTop = ".5rem";
-	// 	} else {
-	// 		document.getElementById("toolbar").style.background = "white";
-	// 	}
-	// }
+	function scrollFunction() {
+		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+			document.getElementById("toolbar").style.background = "rgba(0, 0, 0, 0.9)";
+		} else {
+			document.getElementById("toolbar").style.background = "black";
+		}
+	}
+	function scrollFunctionMobile() {
+		if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+			document.getElementById("mobile-menu").style.background = "rgba(0, 0, 0, 0.9)";
+		} else {
+			document.getElementById("mobile-menu").style.background = "black";
+		}
+	}
 };
 
 export default Toolbar;

@@ -1,17 +1,17 @@
 @import "../../../constants/Variables.scss";
 
 .nav-bar {
-    height: 75px;
+    height: 50px;
     width: 100%;
     background-color: black;
     position: sticky;
-    top: 0;
+    top: -1px;
     left: 0;
     display: flex;
     justify-content: center;
     z-index: 90;
     @media only screen and (min-width: $breakpoint-md) {
-        height: 100px;
+        height: 50px;
     }
 }
 .nav-main {
@@ -21,7 +21,7 @@
 .nav-mobile-main {
     background-color: black;
     position: sticky;
-    top: 75px;
+    top: 48px;
     z-index: 90;
     border-top: 1px solid rgba(255, 255, 255, 0.24);
     @media only screen and (min-width: $breakpoint-md) {

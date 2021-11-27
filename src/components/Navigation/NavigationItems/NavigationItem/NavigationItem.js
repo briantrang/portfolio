@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const NavigationItem = (props) => (
 	<>
 		{!props.mobile && (
-			<li className={props.button ? "nav-item nav-button" : "nav-item"}>
+			<li className="nav-item">
 				<AnchorLink offset="100" href={"/" + props.link}>
 					{props.children}
 				</AnchorLink>

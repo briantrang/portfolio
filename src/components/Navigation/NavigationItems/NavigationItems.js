@@ -15,7 +15,7 @@ const NavigationItems = (props) => (
 				<NavigationItem link="#projects">
 					<span>Projects</span>
 				</NavigationItem>
-				<NavigationItem link="#contact" button>
+				<NavigationItem link="#contact">
 					<span>Contact Me</span>
 				</NavigationItem>
 			</ul>
@@ -31,7 +31,7 @@ const NavigationItems = (props) => (
 				<NavigationItem link="#projects" mobile>
 					<span>Projects</span>
 				</NavigationItem>
-				<NavigationItem link="#contact" button mobile>
+				<NavigationItem link="#contact" mobile>
 					<span>Contact Me</span>
 				</NavigationItem>
 			</ul>
