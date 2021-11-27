@@ -14,12 +14,12 @@ const PersonalProjectItemCard = (props) => {
 
 					<div className="project-item-description">{props.description}</div>
 					<div className="project-item-link">
-						<a href={props.demoUrl} target="_blank" rel="noopener noreferrer">
+						<a href={props.githubUrl} target="_blank" rel="noopener noreferrer">
 							View Code <i class="fas fa-code"></i>
 						</a>
 					</div>
 					<div className="project-item-link">
-						<a href={props.githubUrl} target="_blank" rel="noopener noreferrer">
+						<a href={props.demoUrl} target="_blank" rel="noopener noreferrer">
 							View Demo <i class="fas fa-laptop-code"></i>
 						</a>
 					</div>

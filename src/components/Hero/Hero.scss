@@ -21,17 +21,23 @@
 
             .hero-text-eyebrow {
                 font-size: 30px;
+                @media only screen and (min-width: $breakpoint-xxl) {
+                    font-size: 45px;
+                }
             }
             .hero-text-heading {
-                font-size: 45px;
+                font-size: 30px;
                 font-weight: 700;
 
-                @media only screen and (min-width: $breakpoint-md) {
+                @media only screen and (min-width: $breakpoint-xxl) {
                     font-size: 60px;
                 }
             }
             .hero-text-job {
-                font-size: 18px;
+                font-size: 36px;
+                @media only screen and (min-width: $breakpoint-xxl) {
+                    font-size: 45px;
+                }
             }
 
             .hero-social-icon {

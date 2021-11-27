@@ -19,6 +19,9 @@ body {
     @media only screen and (min-width: $breakpoint-lg) {
         max-width: 980px;
     }
+    @media only screen and (min-width: $breakpoint-xxl) {
+        max-width: 1440px;
+    }
 }
 
 .primary-background {
