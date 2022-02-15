@@ -18,7 +18,7 @@
     "express": "^4.17.1",
     "firebase": "^7.17.2",
     "node-sass": "^4.14.1",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.6.1",
     "nodemon": "^2.0.4",
     "re-base": "^4.0.0",
     "react": "^16.13.1",
