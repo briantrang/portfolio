@@ -12,7 +12,7 @@ const Resume = (props) => {
 					<div className="resume-body">
 						{props.description} <br />
 						<button className="resume-button" onClick={() => setShow(true)}>
-							View my Resume <i class="fas fa-external-link-alt"></i>
+							View my Resume <i className="fas fa-external-link-alt"></i>
 						</button>
 					</div>
 				</div>

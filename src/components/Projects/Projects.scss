@@ -1,13 +1,6 @@
 @import "../../constants/Variables.scss";
 
 .project-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 15px;
-    padding-top: 2rem;
-
-    @media only screen and (min-width: $breakpoint-md) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 15px;
-    }
+    display: flex;
+    margin-top: 3rem;
 }
