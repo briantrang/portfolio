@@ -2,6 +2,7 @@
 
 .project-item-card {
     border-radius: 25px;
+    height: 100%;
     .project-image {
         width: 100%;
         height: auto;
@@ -10,13 +11,14 @@
     }
 
     .project-content {
-        background-color: white;
+        left: 0;
+        bottom: 0;
+        width: 100%;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        padding: 2.5rem 0 2.5rem 0;
+        text-align: left;
         margin: auto 0;
 
         .project-company-name {
@@ -25,14 +27,18 @@
         }
 
         .project-company-info {
-            max-width: 70%;
-            margin: 0 auto;
+            max-width: 90%;
+            margin-bottom: 2rem;
         }
 
         .project-company-link {
             background-color: transparent;
             border: none;
             color: $linkColor;
+            text-align: left;
+            padding: 0;
+            position: absolute;
+            bottom: 15px;
             .chevron {
                 display: inline-block;
                 width: 15px;

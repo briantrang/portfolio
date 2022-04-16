@@ -46,6 +46,7 @@ const PersonalProjects = (props) => {
 				{filteredItems.map((item, i) => {
 					return (
 						<PersonalProjectItemCard
+							key={i}
 							image={item.image}
 							title={item.title}
 							imgType={item.imgType}
@@ -67,10 +68,10 @@ const PersonalProjects = (props) => {
 		<>
 			<div className="portfolio-container">
 				<div className="project-tabs">
-					{types.map((type) => (
+					{types.map((type, index) => (
 						<button
 							className={type === activeTab ? "project-button active" : "project-button"}
-							key={type}
+							key={index}
 							active={activeTab === type}
 							onClick={() => setActiveTab(type)}
 						>
