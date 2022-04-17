@@ -17,7 +17,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "firebase": "^7.17.2",
-    "node-sass": "^7.0.0",
     "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
     "re-base": "^4.0.0",
@@ -58,6 +57,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "sass": "^1.50.0"
   }
 }
