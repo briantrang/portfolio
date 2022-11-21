@@ -26,7 +26,7 @@
     "react-dom": "^16.13.1",
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-swipeable-views": "^0.13.9",
     "react-transition-group": "^4.4.2",
     "swiper": "^6.8.4"
