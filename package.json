@@ -18,7 +18,7 @@
     "express": "^4.17.1",
     "firebase": "^7.17.2",
     "nodemailer": "^6.4.10",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.20",
     "re-base": "^4.0.0",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
