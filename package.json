@@ -29,7 +29,7 @@
     "react-scripts": "5.0.1",
     "react-swipeable-views": "^0.13.9",
     "react-transition-group": "^4.4.2",
-    "swiper": "^6.8.4"
+    "swiper": "^12.1.2"
   },
   "scripts": {
     "publish": "",
